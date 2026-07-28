@@ -1,0 +1,8 @@
+/node_modules
+/vendor
+/.idea
+/composer.lock
+/coverage
+/.eslintcache
+.DS_Store
+/.stylelintcache

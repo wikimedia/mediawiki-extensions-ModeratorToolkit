@@ -1,0 +1,37 @@
+{
+	"name": "ModeratorToolkit",
+	"author": [
+		"Jason Sherman",
+		"Dillon Hardy",
+		"Sammy Fox",
+		"MusikAnimal"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:ModeratorToolkit",
+	"description": "moderator-toolkit-desc",
+	"type": "interface",
+	"license-name": "GPL-2.0-or-later",
+	"requires": {
+		"MediaWiki": ">= 1.47",
+		"extensions": {
+			"PersonalDashboard": "*"
+		}
+	},
+	"suggests": {
+		"extensions": {
+			"ORES": "*"
+		}
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\ModeratorToolkit\\": "src/"
+	},
+	"MessagesDirs": {
+		"ModeratorToolkit": [
+			"i18n"
+		]
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "ModeratorToolkit/resources"
+	},
+	"manifest_version": 2
+}

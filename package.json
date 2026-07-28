@@ -1,0 +1,32 @@
+{
+	"name": "moderator-toolkit",
+	"private": true,
+	"scripts": {
+		"coverage": "npm -s run test:unit -- --coverage",
+		"test": "npm -s run lint && npm -s run test:unit",
+		"test:unit": "vitest run --passWithNoTests",
+		"test:update": "npm -s run test:unit -- -u",
+		"lint": "npm -s run lint:js && npm -s run lint:styles && npm -s run lint:i18n",
+		"lint:js": "eslint .",
+		"lint:styles": "stylelint \"resources/**/*.{less,css,vue}\" --allowEmptyInput --cache",
+		"lint:i18n": "banana-checker i18n/",
+		"lint:fix": "npm -s run lint:fix:js && npm -s run lint:fix:styles && npm -s run lint:fix:svg",
+		"lint:fix:js": "npm -s run lint:js -- --fix",
+		"lint:fix:styles": "npm -s run lint:styles -- --fix",
+		"lint:fix:svg": "svgo -rf resources"
+	},
+	"devDependencies": {
+		"@eslint/eslintrc": "^3.3.6",
+		"@eslint/js": "^9.39.5",
+		"eslint": "^9.39.5",
+		"eslint-config-wikimedia": "0.32.4",
+		"grunt-banana-checker": "^0.13.0",
+		"stylelint-config-wikimedia": "0.19.3",
+		"vitest-plugin-mediawiki": "git+https://gitlab.wikimedia.org/repos/modtools/vitest-plugin.git#v0.1.19"
+	},
+	"overrides": {
+		"eslint-config-wikimedia": {
+			"eslint": "$eslint"
+		}
+	}
+}
