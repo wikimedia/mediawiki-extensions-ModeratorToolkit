@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Repakr"
+		]
+	},
+	"moderator-toolkit-policies-guidelines-title": "Правила і настанови",
+	"moderator-toolkit-policies-guidelines-body": "Перевірте, що є прийнятним та очікуваним у Вікіпедії.",
+	"moderator-toolkit-policies-guidelines-neutral-point-of-view-title": "Нейтральна точка зору",
+	"moderator-toolkit-policies-guidelines-neutral-point-of-view-definition": "Вміст статті повинен чесно представити всі існуючі точки зору пропорційно та без упереджень.",
+	"moderator-toolkit-policies-guidelines-neutral-point-of-view-example-1": "Нью-Йорк Янкіз — найкраща бейсбольна команда в історії.",
+	"moderator-toolkit-policies-guidelines-neutral-point-of-view-answer-1-label": "Не нейтрально:",
+	"moderator-toolkit-policies-guidelines-neutral-point-of-view-answer-1-text": "Це думка, яку не можна підкріпити надійними джерелами. Натомість Ви можете написати «Нью-Йорк Янкіз виграли 26 чемпіонатів Світової серії, що майже в тричі більше, ніж у будь-якої іншої команди».",
+	"moderator-toolkit-policies-guidelines-neutral-point-of-view-answer-2-label": "Нейтрально:",
+	"moderator-toolkit-policies-guidelines-no-original-research-title": "Жодних оригінальних досліджень",
+	"moderator-toolkit-policies-guidelines-verifiability-title": "Перевірність",
+	"moderator-toolkit-policies-guidelines-assume-good-faith-title": "Припускайте добрі наміри",
+	"moderator-toolkit-policies-guidelines-examples-header": "Приклад $1"
+}

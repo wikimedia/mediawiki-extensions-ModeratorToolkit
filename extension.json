@@ -26,12 +26,64 @@
 	},
 	"MessagesDirs": {
 		"ModeratorToolkit": [
-			"i18n"
+			"i18n",
+			"i18n/ext.moderatorToolkit.policiesGuidelines"
 		]
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "resources",
 		"remoteExtPath": "ModeratorToolkit/resources"
+	},
+	"ResourceModules": {
+		"ext.moderatorToolkit.policiesGuidelines.styles": {
+			"class": "MediaWiki\\ResourceLoader\\CodexModule",
+			"codexStyleOnly": true,
+			"codexComponents": [
+				"CdxAccordion"
+			],
+			"styles": [
+				"ext.moderatorToolkit.policiesGuidelines.styles/index.less"
+			],
+			"callback": "MediaWiki\\ResourceLoader\\CodexModule::getIcons",
+			"callbackParam": [
+				"cdxIconAlert",
+				"cdxIconError",
+				"cdxIconSuccess"
+			]
+		}
+	},
+	"attributes": {
+		"PersonalDashboard": {
+			"Modules": {
+				"policiesGuidelines": {
+					"class": "MediaWiki\\Extension\\ModeratorToolkit\\Modules\\PoliciesGuidelines"
+				}
+			},
+			"ModuleGroups": {
+				"moderators": {
+					"description": "Modules for the moderator dashboard.",
+					"version": 0,
+					"groups": [
+						{
+							"name": "sidebar",
+							"subgroups": [
+								{
+									"name": "secondary",
+									"enabled": true,
+									"modules": [
+										{
+											"name": "policiesGuidelines",
+											"enabled": true,
+											"styleMobile": "minimized"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			}
+		}
 	},
 	"manifest_version": 2
 }

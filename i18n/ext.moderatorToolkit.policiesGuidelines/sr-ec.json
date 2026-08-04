@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Milicevic01"
+		]
+	},
+	"moderator-toolkit-policies-guidelines-neutral-point-of-view-title": "Неутрална тачка гледишта",
+	"moderator-toolkit-policies-guidelines-neutral-point-of-view-answer-1-label": "Није неутрално:",
+	"moderator-toolkit-policies-guidelines-neutral-point-of-view-answer-2-label": "Неутрално:",
+	"moderator-toolkit-policies-guidelines-no-original-research-answer-1-label": "Садржи оригинално истраживање:",
+	"moderator-toolkit-policies-guidelines-verifiability-title": "Проверљивост",
+	"moderator-toolkit-policies-guidelines-verifiability-answer-3-label": "Проверљиво:",
+	"moderator-toolkit-policies-guidelines-examples-header": "Пример $1"
+}
