@@ -9,6 +9,7 @@ use MediaWiki\Extension\PersonalDashboard\Modules\BaseModule;
 use MediaWiki\Html\Html;
 use Wikimedia\Codex\Component\Accordion;
 use Wikimedia\Codex\Component\HtmlSnippet;
+use Wikimedia\Codex\Localization\MediaWikiLocalization;
 use Wikimedia\Codex\Utility\Codex;
 
 /**
@@ -39,7 +40,7 @@ class PoliciesGuidelines extends BaseModule {
 
 	public function __construct( IContextSource $context ) {
 		parent::__construct( $context );
-		$this->codex = new Codex();
+		$this->codex = new Codex( new MediaWikiLocalization( $context ) );
 	}
 
 	/**
