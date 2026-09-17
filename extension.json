@@ -7,7 +7,7 @@
 		"MusikAnimal"
 	],
 	"url": "https://www.mediawiki.org/wiki/Extension:ModeratorToolkit",
-	"description": "moderator-toolkit-desc",
+	"descriptionmsg": "moderator-toolkit-desc",
 	"type": "interface",
 	"license-name": "GPL-2.0-or-later",
 	"requires": {
