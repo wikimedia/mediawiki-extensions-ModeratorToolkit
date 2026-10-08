@@ -50,6 +50,57 @@
 				"cdxIconError",
 				"cdxIconSuccess"
 			]
+		},
+		"ext.moderatorToolkit.reviewChanges": {
+			"localBasePath": "resources/ext.moderatorToolkit.reviewChanges",
+			"remoteExtPath": "ModeratorToolkit/resources/ext.moderatorToolkit.reviewChanges",
+			"class": "MediaWiki\\ResourceLoader\\CodexModule",
+			"codexComponents": [
+				"CdxIcon",
+				"CdxInfoChip",
+				"CdxToggleSwitch"
+			],
+			"packageFiles": [
+				"App.vue",
+				"utils.js",
+				"components/AboutPanel.vue",
+				"components/ListCard.vue",
+				"components/PersonalizationPanel.vue",
+				"composables/useReviewChangesFeed.js",
+				{
+					"name": "icons.json",
+					"callback": "MediaWiki\\ResourceLoader\\CodexModule::getIcons",
+					"callbackParam": [
+						"cdxIconConfigure",
+						"cdxIconNotice",
+						"cdxIconUserAvatar",
+						"cdxIconUserTemporary"
+					]
+				}
+			],
+			"messages": [
+				"personal-dashboard-review-changes-high-revert-risk-label",
+				"personal-dashboard-review-changes-major-changes-label",
+				"personal-dashboard-review-changes-menu-about",
+				"personal-dashboard-review-changes-menu-button-label",
+				"personal-dashboard-review-changes-menu-personalization",
+				"personal-dashboard-review-changes-personalization-description",
+				"personal-dashboard-review-changes-personalization-title",
+				"personal-dashboard-risky-article-edits-list-card-aria-label",
+				"personal-dashboard-risky-article-edits-list-card-no-comment-message",
+				"personal-dashboard-risky-article-edits-mobile-summary-footer-link-text",
+				"personal-dashboard-risky-article-edits-progress-bar-aria-label",
+				"personal-dashboard-risky-article-edits-subheader-info"
+			],
+			"dependencies": [
+				"vue",
+				"mediawiki.api",
+				"mediawiki.jqueryMsg",
+				"mediawiki.Title",
+				"mediawiki.util",
+				"user.options",
+				"ext.personalDashboard.common"
+			]
 		}
 	},
 	"attributes": {
@@ -57,6 +108,12 @@
 			"Modules": {
 				"policiesGuidelines": {
 					"class": "MediaWiki\\Extension\\ModeratorToolkit\\Modules\\PoliciesGuidelines"
+				},
+				"ext.moderatorToolkit.reviewChanges": {
+					"class": "MediaWiki\\Extension\\ModeratorToolkit\\Modules\\ReviewChanges",
+					"services": [
+						"PersonalDashboardRevisionScoreLookup"
+					]
 				}
 			},
 			"ModuleGroups": {
@@ -64,6 +121,21 @@
 					"description": "Modules for the moderator dashboard.",
 					"version": 0,
 					"groups": [
+						{
+							"name": "main",
+							"subgroups": [
+								{
+									"name": "primary",
+									"modules": [
+										{
+											"name": "ext.moderatorToolkit.reviewChanges",
+											"enabled": true,
+											"style": "thin"
+										}
+									]
+								}
+							]
+						},
 						{
 							"name": "sidebar",
 							"subgroups": [

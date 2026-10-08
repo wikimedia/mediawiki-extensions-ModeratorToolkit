@@ -1,0 +1,116 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`mount component 1`] = `
+<span
+  class="cdx-card personal-dashboard-feed__card moderator-toolkit-review-changes__card"
+>
+  <!--v-if-->
+  <span
+    class="cdx-card__text"
+  >
+    <span
+      class="cdx-card__text__title"
+    >
+      
+      
+    </span>
+    <span
+      class="cdx-card__text__description"
+    >
+      
+      <span
+        class="personal-dashboard-feed__card__container"
+      >
+        <a
+          aria-label="⧼personal-dashboard-risky-article-edits-list-card-aria-label⧽"
+          class="personal-dashboard-feed__card__link"
+          href="/w/index.php?title=TestTitle&diff=0&oldid=0&origin=personaldashboard-recentchanges"
+          target="_blank"
+        />
+        <span
+          class="personal-dashboard-feed__card__header"
+        >
+          
+          <a
+            class="moderator-toolkit-review-changes__card__title"
+            href="/wiki/TestTitle"
+            target="_blank"
+          >
+            TestTitle
+          </a>
+          <span
+            class="moderator-toolkit-review-changes__card__description"
+          >
+            a description
+          </span>
+          
+        </span>
+        <span
+          class="personal-dashboard-feed__card__meta"
+        >
+          
+          <span
+            class="moderator-toolkit-review-changes__card__user"
+          >
+            <span
+              class="moderator-toolkit-review-changes__card__icon"
+            >
+              <span
+                class="cdx-icon cdx-icon--small"
+              >
+                <svg
+                  aria-hidden="true"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!--v-if-->
+                  <g>
+                    <path
+                      d="M12 11a6 6 0 016 6v2H2v-2a6 6 0 016-6zM10 1a4 4 0 110 8 4 4 0 010-8"
+                    />
+                  </g>
+                </svg>
+              </span>
+            </span>
+            <a
+              class="moderator-toolkit-review-changes__card__username"
+              href="/wiki/User:TestUser"
+              target="_blank"
+            >
+              TestUser
+            </a>
+          </span>
+          <span
+            class="moderator-toolkit-review-changes__card__meta"
+          >
+            <span>
+               · 
+            </span>
+            <span
+              class="moderator-toolkit-review-changes__card__timestamp"
+            >
+              in 2 hours
+            </span>
+          </span>
+          
+        </span>
+        <span
+          class="personal-dashboard-feed__card__description"
+        >
+          
+          <span
+            class="moderator-toolkit-review-changes__card__summary"
+          >
+            TestComment
+          </span>
+          
+        </span>
+      </span>
+      
+    </span>
+    <!--v-if-->
+  </span>
+</span>
+`;
