@@ -43,9 +43,8 @@ class ReviewChanges extends BaseModule {
 	}
 
 	/**
-	 * The card carries no description of its own any more: design moved that
-	 * sentence into the header menu, under "About Review changes" (T433725).
-	 * The client reads the same message there.
+	 * The card has no description of its own. The header menu's "About Review
+	 * changes" panel shows it instead.
 	 * @inheritDoc
 	 */
 	protected function hasHeaderMenu(): bool {

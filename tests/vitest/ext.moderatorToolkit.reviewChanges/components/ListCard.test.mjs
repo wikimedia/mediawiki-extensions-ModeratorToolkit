@@ -15,28 +15,6 @@ function getOtherLinks( wrapper ) {
 	];
 }
 
-function mountWithLengths( oldlen, newlen ) {
-	return mount( ListCard, {
-		props: {
-			title: 'TestTitle',
-			newlen,
-			// eslint-disable-next-line camelcase
-			old_revid: 0,
-			oldlen,
-			revid: 0,
-			user: 'TestUser',
-			parsedcomment: 'TestComment',
-			timestamp: new Date( 2026, 1, 1, 3, 0 ).toISOString(),
-			feedorigin: 'recentchanges'
-		},
-		global: {
-			stubs: {
-				UserInfoButton: true
-			}
-		}
-	} );
-}
-
 // Safely ignore error: Cannot find package 'ext.checkUser.userInfoCard'
 mw.loader.using = () => {};
 
@@ -122,7 +100,7 @@ test( 'strips all html formatting from parsedcomment', () => {
 		}
 	} );
 
-	expect( wrapper.vm.comment ).toStrictEqual( 'Plain text heading, bold, and link.' );
+	expect( wrapper.vm.editSummary ).toStrictEqual( 'Plain text heading, bold, and link.' );
 } );
 
 test( 'sets visited on primary link click', async () => {
@@ -149,7 +127,7 @@ test( 'sets visited on primary link click', async () => {
 
 	expect( hasVisited( wrapper ) ).toStrictEqual( false );
 
-	// Remove href for testing only, otherwise happy-dom will fetch\
+	// Remove href for testing only, otherwise happy-dom will fetch
 	const link = wrapper.find( '.personal-dashboard-feed__card__link' );
 	link.element.removeAttribute( 'href' );
 
@@ -190,7 +168,7 @@ test( 'does not set visited on other link clicks', async () => {
 	}
 } );
 
-test( 'title and username are not links on mobile', async () => {
+test( 'title and username are not links on a narrow viewport', async () => {
 	const wrapper = mount( ListCard, {
 		props: {
 			title: 'TestTitle',
@@ -219,7 +197,7 @@ test( 'title and username are not links on mobile', async () => {
 	}
 } );
 
-test( 'user info card visible on desktop', () => {
+test( 'user info card visible on a wide viewport', () => {
 	mw.user.options.set( 'checkuser-userinfocard-enable', true );
 
 	const wrapper = mount( ListCard, {
@@ -248,7 +226,7 @@ test( 'user info card visible on desktop', () => {
 } );
 
 test( 'shows the major changes chip when the size delta exceeds 1000 bytes', () => {
-	const wrapper = mountWithLengths( 2000, 3001 );
+	const wrapper = mountCard( { oldlen: 2000, newlen: 3001 } );
 
 	expect( wrapper.vm.isMajorChange ).toStrictEqual( true );
 
@@ -259,27 +237,27 @@ test( 'shows the major changes chip when the size delta exceeds 1000 bytes', () 
 } );
 
 test( 'shows the major changes chip for large removals', () => {
-	const wrapper = mountWithLengths( 3001, 2000 );
+	const wrapper = mountCard( { oldlen: 3001, newlen: 2000 } );
 
 	expect( wrapper.vm.isMajorChange ).toStrictEqual( true );
 	expect( wrapper.find( '.cdx-info-chip' ).exists() ).toStrictEqual( true );
 } );
 
 test( 'hides the major changes chip for a small size delta', () => {
-	const wrapper = mountWithLengths( 2000, 2100 );
+	const wrapper = mountCard( { oldlen: 2000, newlen: 2100 } );
 
 	expect( wrapper.vm.isMajorChange ).toStrictEqual( false );
 	expect( wrapper.find( '.cdx-info-chip' ).exists() ).toStrictEqual( false );
 } );
 
 test( 'hides the major changes chip when the size delta is exactly 1000 bytes', () => {
-	const wrapper = mountWithLengths( 2000, 3000 );
+	const wrapper = mountCard( { oldlen: 2000, newlen: 3000 } );
 
 	expect( wrapper.vm.isMajorChange ).toStrictEqual( false );
 	expect( wrapper.find( '.cdx-info-chip' ).exists() ).toStrictEqual( false );
 } );
 
-test( 'user info card hidden on mobile', () => {
+test( 'user info card hidden on a narrow viewport', () => {
 	const wrapper = mount( ListCard, {
 		props: {
 			title: 'TestTitle',
@@ -306,7 +284,7 @@ test( 'user info card hidden on mobile', () => {
 } );
 
 test( 'shows the page description the feed item carries', () => {
-	const wrapper = mountWithLengths( 0, 0 );
+	const wrapper = mountCard( { oldlen: 0, newlen: 0 } );
 	expect( wrapper.find( '.moderator-toolkit-review-changes__card__description' ).exists() )
 		.toStrictEqual( false );
 
@@ -481,7 +459,7 @@ test( 'shows both flags on an edit that earns both', () => {
 	expect( chips ).toHaveLength( 2 );
 
 	// The chips sit directly in the card's own row, which is what carries the
-	// flex-wrap and the gap. jsdom applies no stylesheet, so the structure is
+	// flex-wrap and the gap. happy-dom applies no stylesheet, so the structure is
 	// what a test can hold on to.
 	const row = wrapper.find( '.moderator-toolkit-review-changes__card__flags' );
 	expect( Array.from( row.element.children ) ).toHaveLength( 2 );

@@ -20,7 +20,7 @@ vi.mock( '/resources/ext.moderatorToolkit.reviewChanges/composables/useReviewCha
 import { useReviewChangesFeed } from '/resources/ext.moderatorToolkit.reviewChanges/composables/useReviewChangesFeed.js';
 const { feedState, load, loadMore } = useReviewChangesFeed();
 
-import RecentActivity from '/resources/ext.moderatorToolkit.reviewChanges/App.vue';
+import App from '/resources/ext.moderatorToolkit.reviewChanges/App.vue';
 import PersonalizationPanel from '/resources/ext.moderatorToolkit.reviewChanges/components/PersonalizationPanel.vue';
 
 // Safely ignore error: Cannot find package 'ext.checkUser.userInfoCard'
@@ -37,12 +37,12 @@ beforeEach( () => {
 } );
 
 test( 'mount component', () => {
-	const wrapper = mount( RecentActivity );
+	const wrapper = mount( App );
 	expect( wrapper.element ).toMatchSnapshot();
 } );
 
 test( 'shows progress bar when loading', () => {
-	const wrapper = mount( RecentActivity );
+	const wrapper = mount( App );
 	expect( wrapper.find( '.cdx-progress-bar' ).exists() ).toStrictEqual( true );
 } );
 
@@ -53,7 +53,7 @@ test( 'shows error message when there is one', () => {
 	// Asserted through the $i18n call rather than the rendered text: the
 	// message mock drops parameters, so the failure is only visible there.
 	const i18n = vi.fn( ( key ) => key );
-	const wrapper = mount( RecentActivity, { global: { mocks: { $i18n: i18n } } } );
+	const wrapper = mount( App, { global: { mocks: { $i18n: i18n } } } );
 
 	expect( i18n ).toHaveBeenCalledWith( 'personal-dashboard-feed-error', 'An Error' );
 	expect( wrapper.text() ).toContain( 'personal-dashboard-feed-error' );
@@ -84,7 +84,7 @@ test( 'shows recent changes with information', () => {
 		}
 	];
 
-	const wrapper = mount( RecentActivity );
+	const wrapper = mount( App );
 
 	expect( wrapper.text() ).toContain( 'Article Title' );
 	expect( wrapper.text() ).toContain( 'A comment' );
@@ -119,7 +119,7 @@ test( 'does not leak the feed id or other non-prop fields onto the rendered card
 	feedState.isLoading = false;
 	feedState.items = [ makeFeedItem( 0 ) ];
 
-	const wrapper = mount( RecentActivity );
+	const wrapper = mount( App );
 
 	// The endpoint stamps every item with these fields for FeedPanel's own use
 	// and for a card that wants them; ListCard never declares them as props, so
@@ -137,7 +137,7 @@ test( 'does not leak the feed id or other non-prop fields onto the rendered card
 test( 'fetches the full 10-item limit regardless of summary/focused/active', () => {
 	feedState.isLoading = false;
 
-	mount( RecentActivity );
+	mount( App );
 	expect( load ).toHaveBeenCalledWith( 10 );
 } );
 
@@ -145,7 +145,7 @@ test( 'the summary card shows only the first 3 items of a larger fetched feed', 
 	feedState.isLoading = false;
 	feedState.items = Array.from( { length: 5 }, ( _, i ) => makeFeedItem( i ) );
 
-	const wrapper = mount( RecentActivity );
+	const wrapper = mount( App );
 
 	expect( wrapper.findAllComponents( { name: 'ListCard' } ) ).toHaveLength( 3 );
 	expect( wrapper.text() ).toContain( 'Article 0' );
@@ -160,7 +160,7 @@ test( 'a dialog reusing the same teleported instance shows every fetched item, n
 	// so this simulates the transition by mounting with active already true rather
 	// than toggling props post-mount: what matters here is that the fetched feed
 	// isn't re-sliced to the summary count once summary/full styling drops away.
-	const wrapper = mount( RecentActivity, { props: { active: true } } );
+	const wrapper = mount( App, { props: { active: true } } );
 
 	expect( wrapper.findAllComponents( { name: 'ListCard' } ) ).toHaveLength( 5 );
 	expect( wrapper.text() ).toContain( 'Article 4' );
@@ -170,7 +170,7 @@ test( 'the grid card shows the summary affordances on every viewport', () => {
 	feedState.isLoading = false;
 	feedState.items = Array.from( { length: 5 }, ( _, i ) => makeFeedItem( i ) );
 
-	const wrapper = mount( RecentActivity );
+	const wrapper = mount( App );
 	expect( wrapper.find( '.personal-dashboard-feed__summary-footer' ).exists() ).toStrictEqual( true );
 	expect( wrapper.find( '.personal-dashboard-feed__list--summary' ).exists() ).toStrictEqual( true );
 } );
@@ -179,10 +179,10 @@ test( 'focused or active drops the summary affordances', () => {
 	feedState.isLoading = false;
 	feedState.items = Array.from( { length: 5 }, ( _, i ) => makeFeedItem( i ) );
 
-	const focused = mount( RecentActivity, { props: { focused: true } } );
+	const focused = mount( App, { props: { focused: true } } );
 	expect( focused.find( '.personal-dashboard-feed__summary-footer' ).exists() ).toStrictEqual( false );
 
-	const active = mount( RecentActivity, { props: { active: true } } );
+	const active = mount( App, { props: { active: true } } );
 	expect( active.find( '.personal-dashboard-feed__summary-footer' ).exists() ).toStrictEqual( false );
 } );
 
@@ -191,7 +191,7 @@ test( 'the summary footer opens the module dialog via the router', async () => {
 	feedState.items = Array.from( { length: 5 }, ( _, i ) => makeFeedItem( i ) );
 
 	const push = vi.fn();
-	const wrapper = mount( RecentActivity, {
+	const wrapper = mount( App, {
 		global: {
 			mocks: {
 				$router: { push }
@@ -212,17 +212,17 @@ describe( 'loading more edits', () => {
 	} );
 
 	test( 'the full list offers the control, the summary card does not', () => {
-		const full = mount( RecentActivity, { props: { active: true } } );
+		const full = mount( App, { props: { active: true } } );
 		expect( full.find( '.personal-dashboard-feed__load-more' ).exists() )
 			.toStrictEqual( true );
 
-		const summary = mount( RecentActivity );
+		const summary = mount( App );
 		expect( summary.find( '.personal-dashboard-feed__load-more' ).exists() )
 			.toStrictEqual( false );
 	} );
 
 	test( 'asks the feed for the next page', async () => {
-		const wrapper = mount( RecentActivity, { props: { active: true } } );
+		const wrapper = mount( App, { props: { active: true } } );
 
 		await wrapper.find( '.personal-dashboard-feed__load-more' ).trigger( 'click' );
 
@@ -232,7 +232,7 @@ describe( 'loading more edits', () => {
 	test( 'spins a progress bar below the list while the next page loads', () => {
 		feedState.isLoadingMore = true;
 
-		const wrapper = mount( RecentActivity, { props: { active: true } } );
+		const wrapper = mount( App, { props: { active: true } } );
 
 		expect( wrapper.find( '.cdx-progress-bar' ).exists() ).toStrictEqual( true );
 		expect( wrapper.find( '.personal-dashboard-feed__load-more' ).exists() )
@@ -243,14 +243,14 @@ describe( 'loading more edits', () => {
 } );
 
 test( 'no header menu when the frame emits no header slot', () => {
-	const wrapper = mount( RecentActivity );
+	const wrapper = mount( App );
 
 	expect( wrapper.findComponent( { name: 'ModuleHeaderMenu' } ).exists() )
 		.toStrictEqual( false );
 } );
 
 test( 'teleports the header menu into the header slot', () => {
-	const wrapper = mount( RecentActivity, {
+	const wrapper = mount( App, {
 		props: { headerTarget: '#pd-header-slot-reviewChanges' }
 	} );
 
@@ -273,7 +273,7 @@ test.each( [
 	[ 'personalization', 'personal-dashboard-review-changes-personalization-title' ],
 	[ 'about', 'personal-dashboard-review-changes-menu-about' ]
 ] )( 'picking %s opens that panel alone', async ( value, title ) => {
-	const wrapper = mount( RecentActivity, {
+	const wrapper = mount( App, {
 		props: { headerTarget: '#pd-header-slot-reviewChanges' }
 	} );
 
@@ -298,7 +298,7 @@ test.each( [
 // longer reaches the scaffold through $attrs. The template has to hand it over
 // by name, and nothing else would notice if it stopped.
 test( 'hands isNarrow to the scaffold as well as to the header panels', () => {
-	const wrapper = mount( RecentActivity, {
+	const wrapper = mount( App, {
 		props: { headerTarget: '#pd-header-slot-reviewChanges', isNarrow: true }
 	} );
 
@@ -310,7 +310,7 @@ test( 'hands isNarrow to the scaffold as well as to the header panels', () => {
 } );
 
 test( 'loads the feed again when personalization changes', () => {
-	const wrapper = mount( RecentActivity, {
+	const wrapper = mount( App, {
 		props: { headerTarget: '#pd-header-slot-reviewChanges' }
 	} );
 	load.mockClear();
@@ -324,7 +324,7 @@ test( 'loads the feed again when personalization changes', () => {
 test.each( [ 'isLoading', 'isLoadingMore' ] )( 'disables the personalization toggle while %s', ( field ) => {
 	feedState.isLoading = false;
 	feedState[ field ] = true;
-	const wrapper = mount( RecentActivity, {
+	const wrapper = mount( App, {
 		props: { headerTarget: '#pd-header-slot-reviewChanges' }
 	} );
 

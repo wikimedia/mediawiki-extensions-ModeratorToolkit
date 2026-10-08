@@ -1,9 +1,9 @@
 /**
  * @file composables/useReviewChangesFeed.js
  *
- * The Review Changes feed source: one request to the shared feed endpoint,
- * which merges the three sources, drops the duplicates between them and hands
- * back a token that resumes where the page stopped.
+ * Loads the Review Changes feed: one request to the shared feed endpoint,
+ * which merges the sources it asks for, drops the duplicates between them and
+ * hands back a token that resumes where the page stopped.
  */
 
 const { useFeedState } = require( 'ext.personalDashboard.common' );
@@ -15,7 +15,8 @@ const FEED_PATH = '/personaldashboard/v0/feed';
 // the limit does not divide evenly.
 const PERSONALIZED_SOURCES = [ 'watchlist', 'recentlyedited', 'mostedited' ];
 
-// Human edits to articles that are not reverted, the same for every user.
+// Recent human edits to articles, without reverted edits or the viewer's own.
+// Patrollers see only unpatrolled ones.
 const UNPERSONALIZED_SOURCES = [ 'recentchanges' ];
 
 /**

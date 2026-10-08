@@ -2,7 +2,7 @@
 	<feed-card
 		class="moderator-toolkit-review-changes__card"
 		:url="diffUrl"
-		:aria-label="ariaLabel"
+		:aria-label="diffLinkAriaLabel"
 	>
 		<template #header>
 			<span
@@ -14,7 +14,7 @@
 
 			<a
 				v-else
-				:href="titleUrl"
+				:href="pageUrl"
 				target="_blank"
 				class="moderator-toolkit-review-changes__card__title"
 			>
@@ -70,11 +70,11 @@
 		</template>
 
 		<template #description>
-			<span v-if="comment" class="moderator-toolkit-review-changes__card__summary">
-				{{ comment }}
+			<span v-if="editSummary" class="moderator-toolkit-review-changes__card__edit-summary">
+				{{ editSummary }}
 			</span>
-			<span v-else class="moderator-toolkit-review-changes__card__summary--missing">
-				{{ missingCommentMessage }}
+			<span v-else class="moderator-toolkit-review-changes__card__edit-summary--missing">
+				{{ noEditSummaryText }}
 			</span>
 		</template>
 
@@ -143,29 +143,29 @@ module.exports = defineComponent( {
 	setup() {
 		return {
 			showUserInfoCard: mw.user.options.get( 'checkuser-userinfocard-enable' ),
-			missingCommentMessage: mw.msg( 'personal-dashboard-risky-article-edits-list-card-no-comment-message' )
+			noEditSummaryText: mw.msg( 'personal-dashboard-risky-article-edits-list-card-no-comment-message' )
 		};
 	},
 	computed: {
 		diffUrl() {
 			const params = { diff: this.revid };
-			// Null on a page creation, which has no parent to diff against.
+			// The endpoint declares it nullable.
 			if ( this.old_revid !== null ) {
 				params.oldid = this.old_revid;
 			}
 			params.origin = ORIGIN_PREFIX + this.feedorigin;
 			return new mw.Title( this.title ).getUrl( params );
 		},
-		ariaLabel() {
+		diffLinkAriaLabel() {
 			return mw.msg( 'personal-dashboard-risky-article-edits-list-card-aria-label', this.title );
 		},
-		titleUrl() {
+		pageUrl() {
 			return new mw.Title( this.title ).getUrl();
 		},
 		userUrl() {
-			return new mw.Title( this.user, 2 ).getUrl();
+			return new mw.Title( this.user, mw.config.get( 'wgNamespaceIds' ).user ).getUrl();
 		},
-		comment() {
+		editSummary() {
 			return stripMarkup( this.parsedcomment );
 		},
 		timestampFormatted() {
@@ -294,8 +294,8 @@ module.exports = defineComponent( {
 	// The edit summary keeps at most two lines, then ends with an ellipsis.
 	// -webkit-box is block-level, so this also puts the summary on its own line
 	// below the description.
-	&__summary,
-	&__summary--missing {
+	&__edit-summary,
+	&__edit-summary--missing {
 		display: -webkit-box;
 		line-clamp: 2;
 		overflow: hidden;
@@ -305,7 +305,7 @@ module.exports = defineComponent( {
 		-webkit-box-orient: vertical;
 	}
 
-	&__summary--missing {
+	&__edit-summary--missing {
 		font-style: italic;
 	}
 

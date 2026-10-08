@@ -26,7 +26,7 @@
 			v-slot="{ anchor }"
 			:menu-items="menuItems"
 			:footer-item="menuFooterItem"
-			:button-label="menuButtonLabel"
+			:button-label="menuButtonAriaLabel"
 			@select="openPanel = $event"
 		>
 			<personalization-panel
@@ -126,7 +126,7 @@ module.exports = defineComponent( {
 			},
 			footerLabel: mw.msg( 'personal-dashboard-risky-article-edits-mobile-summary-footer-link-text' ),
 			progressBarAriaLabel: mw.msg( 'personal-dashboard-risky-article-edits-progress-bar-aria-label' ),
-			menuButtonLabel: mw.msg( 'personal-dashboard-review-changes-menu-button-label' )
+			menuButtonAriaLabel: mw.msg( 'personal-dashboard-review-changes-menu-button-label' )
 		};
 	},
 	mounted() {

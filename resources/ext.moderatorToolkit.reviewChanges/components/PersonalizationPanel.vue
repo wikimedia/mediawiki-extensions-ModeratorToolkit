@@ -1,7 +1,7 @@
 <template>
 	<module-panel :title>
 		<cdx-toggle-switch
-			v-model="enabled"
+			v-model="personalized"
 			:disabled="disabled || isSaving"
 			@update:model-value="onToggle"
 		>
@@ -32,7 +32,7 @@ module.exports = defineComponent( {
 	emits: [ 'change' ],
 	setup() {
 		return {
-			enabled: ref( isPersonalized() ),
+			personalized: ref( isPersonalized() ),
 			isSaving: ref( false ),
 			title: mw.msg( 'personal-dashboard-review-changes-personalization-title' ),
 			label: mw.msg( 'personal-dashboard-review-changes-menu-personalization' )
@@ -46,7 +46,7 @@ module.exports = defineComponent( {
 				this.$emit( 'change' );
 			} catch ( err ) {
 				// The feed did not change, so show the setting it still uses.
-				this.enabled = !value;
+				this.personalized = !value;
 				mw.log.error( err );
 			} finally {
 				this.isSaving = false;

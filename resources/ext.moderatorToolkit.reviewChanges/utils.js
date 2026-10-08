@@ -1,4 +1,3 @@
-// The module moves to ModeratorToolkit later, so the option name has that prefix.
 const PERSONALIZE_OPTION_NAME = 'moderatortoolkit-reviewchanges-personalize';
 
 /**

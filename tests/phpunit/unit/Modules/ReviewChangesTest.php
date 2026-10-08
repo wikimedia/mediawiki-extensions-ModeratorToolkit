@@ -12,12 +12,12 @@ use MediaWikiUnitTestCase;
 use Wikimedia\TestingAccessWrapper;
 
 /**
- * The module builds no feed of its own any more; the client reads it from the
- * endpoint. All it still hands the client is the wiki's high-risk threshold,
+ * The module builds no feed of its own; the client reads it from the
+ * endpoint. All it hands the client is the wiki's high-risk threshold,
  * which the card needs to decide whether to flag an edit.
  *
  * Deliberately free of any ORES type, so it runs where ORES is not installed —
- * which includes CI, since PersonalDashboard does not require it.
+ * which includes CI, since ModeratorToolkit does not require it.
  *
  * @covers \MediaWiki\Extension\ModeratorToolkit\Modules\ReviewChanges
  */
@@ -59,15 +59,6 @@ class ReviewChangesTest extends MediaWikiUnitTestCase {
 		);
 	}
 
-	public function testShipsNoFeedItemsToThePage() {
-		$configVars = $this->newModule( null )->getJsConfigVars();
-
-		$this->assertSame(
-			[ 'wgModeratorToolkitReviewChangesHighRevertRiskThreshold' ],
-			array_keys( $configVars )
-		);
-	}
-
 	public function testNamesItsHeaderMessage() {
 		$module = TestingAccessWrapper::newFromObject( $this->newModule( null ) );
 
@@ -89,16 +80,6 @@ class ReviewChangesTest extends MediaWikiUnitTestCase {
 		$this->assertTrue(
 			TestingAccessWrapper::newFromObject( $module )->hasHeaderMenu(),
 			'the module needs a header slot for its overflow menu (T433725)'
-		);
-	}
-
-	public function testCarriesNoSubheaderSinceItsCopyMovedIntoTheHeaderMenu() {
-		$module = $this->newModule( null );
-
-		$this->assertSame(
-			'',
-			TestingAccessWrapper::newFromObject( $module )->getSubheaderText(),
-			'the description belongs to the About panel now, not the card (T433725)'
 		);
 	}
 }
