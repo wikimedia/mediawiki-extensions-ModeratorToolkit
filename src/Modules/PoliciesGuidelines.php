@@ -4,13 +4,10 @@ declare( strict_types = 1 );
 
 namespace MediaWiki\Extension\ModeratorToolkit\Modules;
 
-use MediaWiki\Context\IContextSource;
 use MediaWiki\Extension\PersonalDashboard\Modules\BaseModule;
 use MediaWiki\Html\Html;
 use Wikimedia\Codex\Component\Accordion;
 use Wikimedia\Codex\Component\HtmlSnippet;
-use Wikimedia\Codex\Localization\MediaWikiLocalization;
-use Wikimedia\Codex\Utility\Codex;
 
 /**
  * Core content policies, each a Codex card that is also a <details> accordion:
@@ -35,13 +32,6 @@ class PoliciesGuidelines extends BaseModule {
 		'verifiability' => [ 'warning', 'error', 'success' ],
 		'assume-good-faith' => [ 'error', 'success' ],
 	];
-
-	private Codex $codex;
-
-	public function __construct( IContextSource $context ) {
-		parent::__construct( $context );
-		$this->codex = new Codex( new MediaWikiLocalization( $context ) );
-	}
 
 	/**
 	 * The body is server HTML, CSS-only: the accordions need no behavior module.
@@ -113,7 +103,7 @@ class PoliciesGuidelines extends BaseModule {
 		// router's, so match on that segment alone.
 		$open = explode( '/', $this->getFocusedSubPath(), 2 )[0] === $name;
 
-		return $this->codex->accordion()
+		return $this->getCodex()->accordion()
 			->setId( $name )
 			->setOpen( $open )
 			// Messages used here include:
@@ -199,7 +189,7 @@ class PoliciesGuidelines extends BaseModule {
 				)
 			);
 		}
-		return $this->codex->htmlSnippet()
+		return $this->getCodex()->htmlSnippet()
 			->setContent( $html )
 			->build();
 	}
