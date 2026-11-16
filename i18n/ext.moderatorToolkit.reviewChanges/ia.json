@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "Revider cambiamentos",
+	"moderator-toolkit-review-changes-subheader-info": "Iste modificationes ha essite apportate per altere usatores. Resta al currente e adjuta a mantener le qualitate de Wikipedia per revider los.",
+	"moderator-toolkit-review-changes-footer-preamble": "Vide plus modificationes sur le [{{fullurl:Special:RecentChanges|revertrisklanguageagnostic=all}} pagina de modificationes recente]",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "Nulle summario de modification"
+}

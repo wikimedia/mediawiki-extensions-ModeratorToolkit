@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Meno25",
+			"Mohammed Qays"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "مراجعة التغييرات",
+	"moderator-toolkit-review-changes-subheader-info": "هذه التعديلات أجراها مستخدمون آخرون. ابقَ على اطلاع دائم وساعد في الحفاظ على جودة ويكيبيديا من خلال مراجعتها.",
+	"moderator-toolkit-review-changes-footer-preamble": "يمكنك الاطلاع على المزيد من التعديلات في صفحة التغييرات الأخيرة [{{fullurl:Special:RecentChanges|revertrisklanguageagnostic=all}}]",
+	"moderator-toolkit-review-changes-list-card-aria-label": "افتح عرض الفرق مقابل $1",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "ملخص بدون تعديل",
+	"moderator-toolkit-review-changes-empty": "لم يتم العثور على أي تغييرات",
+	"moderator-toolkit-review-changes-major-changes-label": "تغييرات كبيرة",
+	"moderator-toolkit-review-changes-high-revert-risk-label": "خطر ارتداد مرتفع",
+	"moderator-toolkit-review-changes-menu-button-label": "خيارات إضافية لمراجعة التغييرات",
+	"moderator-toolkit-review-changes-menu-personalization": "التخصيص",
+	"moderator-toolkit-review-changes-menu-about": "حول تغييرات المراجعة",
+	"moderator-toolkit-review-changes-personalization-title": "تخصيص مراجعة التغييرات",
+	"moderator-toolkit-review-changes-personalization-description": "يقترح تغييرات مناسبة بناءً على نشاط التحرير الخاص بك. [https://www.mediawiki.org/wiki/Home/Recommendations#Review_Changes للمزيد من المعلومات]",
+	"moderator-toolkit-review-changes-show-more-aria-label": "عرض المزيد من التغييرات للمراجعة",
+	"moderator-toolkit-review-changes-show-less-aria-label": "عرض عدد أقل من التغييرات للمراجعة"
+}

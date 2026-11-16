@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Suecarmol"
+		]
+	},
+	"moderator-toolkit-active-discussions-title": "Active discussions",
+	"moderator-toolkit-active-discussions-latest-comment": "Latest comment:",
+	"moderator-toolkit-active-discussions-fetch-error": "No active discussions found",
+	"moderator-toolkit-active-discussions-in-topic": "$1, in $2",
+	"moderator-toolkit-active-discussions-show-more-aria-label": "Show more active discussions",
+	"moderator-toolkit-active-discussions-show-less-aria-label": "Show fewer active discussions"
+}

@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Katherine Graessle"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "Review changes",
+	"moderator-toolkit-review-changes-subheader-info": "These edits were made by other users. Stay up to date and help maintain Wikipedia's quality by reviewing them.",
+	"moderator-toolkit-review-changes-footer-preamble": "View more edits in the [{{fullurl:Special:RecentChanges|revertrisklanguageagnostic=all}} recent changes page]",
+	"moderator-toolkit-review-changes-list-card-aria-label": "Open the diff view for $1",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "No edit summary",
+	"moderator-toolkit-review-changes-empty": "No changes found",
+	"moderator-toolkit-review-changes-major-changes-label": "Major changes",
+	"moderator-toolkit-review-changes-high-revert-risk-label": "High revert risk",
+	"moderator-toolkit-review-changes-menu-button-label": "More options for Review changes",
+	"moderator-toolkit-review-changes-menu-personalization": "Personalization",
+	"moderator-toolkit-review-changes-menu-about": "About Review changes",
+	"moderator-toolkit-review-changes-personalization-title": "Personalize Review changes",
+	"moderator-toolkit-review-changes-personalization-description": "Suggests relevant changes based on your editing activity. [https://www.mediawiki.org/wiki/Home/Recommendations#Review_Changes Learn more]",
+	"moderator-toolkit-review-changes-show-more-aria-label": "Show more changes to review",
+	"moderator-toolkit-review-changes-show-less-aria-label": "Show fewer changes to review"
+}

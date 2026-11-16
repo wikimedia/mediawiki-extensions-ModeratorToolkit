@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"0x48fe75df30",
+			"Gsdn",
+			"GuoPC"
+		]
+	},
+	"moderator-toolkit-impact-title": "您的影响",
+	"moderator-toolkit-impact-thanks-sent": "发送感谢",
+	"moderator-toolkit-impact-edits-reviewed": "已审核的编辑",
+	"moderator-toolkit-impact-edits-reviewed-description": "统计您在过去30天内回退的编辑数以及您所发送的所有感谢。",
+	"moderator-toolkit-impact-info-button": "信息"
+}

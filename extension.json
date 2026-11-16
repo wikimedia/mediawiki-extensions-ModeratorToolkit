@@ -25,12 +25,49 @@
 		"MediaWiki\\Extension\\ModeratorToolkit\\": "src/",
 		"MediaWiki\\Extension\\ModeratorToolkit\\Maintenance\\": "maintenance/"
 	},
+	"DefaultUserOptions": {
+		"moderatortoolkit-reviewchanges-personalize": true,
+		"personaldashboard-eligible": false,
+		"personaldashboard-visited": false
+	},
+	"HookHandlers": {
+		"preferences": {
+			"class": "MediaWiki\\Extension\\ModeratorToolkit\\HookHandler\\GetPreferencesHandler"
+		},
+		"skintemplatenav-universal": {
+			"class": "MediaWiki\\Extension\\ModeratorToolkit\\HookHandler\\SkinTemplateNavigationUniversalHandler",
+			"services": [
+				"SpecialPageFactory",
+				"UserOptionsManager",
+				"UserEditTracker"
+			]
+		}
+	},
+	"Hooks": {
+		"GetPreferences": "preferences",
+		"SkinTemplateNavigation::Universal": "skintemplatenav-universal"
+	},
+	"SpecialPages": {
+		"PersonalDashboard": {
+			"class": "MediaWiki\\Extension\\ModeratorToolkit\\Specials\\SpecialPersonalDashboard",
+			"services": [
+				"PersonalDashboardPageDependencies"
+			]
+		}
+	},
 	"MessagesDirs": {
 		"ModeratorToolkit": [
 			"i18n",
+			"i18n/ext.moderatorToolkit.activeDiscussions",
+			"i18n/ext.moderatorToolkit.impact",
+			"i18n/ext.moderatorToolkit.onboarding",
 			"i18n/ext.moderatorToolkit.policiesGuidelines",
+			"i18n/ext.moderatorToolkit.reviewChanges",
 			"i18n/reengagementEmail"
 		]
+	},
+	"ExtensionMessagesFiles": {
+		"ModeratorToolkitAlias": "ModeratorToolkit.i18n.alias.php"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "resources",
@@ -53,6 +90,11 @@
 				"cdxIconSuccess"
 			]
 		},
+		"ext.moderatorToolkit.reviewChanges.styles": {
+			"styles": [
+				"ext.moderatorToolkit.reviewChanges.styles/index.less"
+			]
+		},
 		"ext.moderatorToolkit.reviewChanges": {
 			"localBasePath": "resources/ext.moderatorToolkit.reviewChanges",
 			"remoteExtPath": "ModeratorToolkit/resources/ext.moderatorToolkit.reviewChanges",
@@ -65,6 +107,7 @@
 			"packageFiles": [
 				"App.vue",
 				"utils.js",
+				"instrumentation.js",
 				"components/AboutPanel.vue",
 				"components/ListCard.vue",
 				"components/PersonalizationPanel.vue",
@@ -81,18 +124,19 @@
 				}
 			],
 			"messages": [
-				"personal-dashboard-review-changes-high-revert-risk-label",
-				"personal-dashboard-review-changes-major-changes-label",
-				"personal-dashboard-review-changes-menu-about",
-				"personal-dashboard-review-changes-menu-button-label",
-				"personal-dashboard-review-changes-menu-personalization",
-				"personal-dashboard-review-changes-personalization-description",
-				"personal-dashboard-review-changes-personalization-title",
-				"personal-dashboard-risky-article-edits-list-card-aria-label",
-				"personal-dashboard-risky-article-edits-list-card-no-comment-message",
-				"personal-dashboard-risky-article-edits-mobile-summary-footer-link-text",
-				"personal-dashboard-risky-article-edits-progress-bar-aria-label",
-				"personal-dashboard-risky-article-edits-subheader-info"
+				"moderator-toolkit-review-changes-empty",
+				"moderator-toolkit-review-changes-high-revert-risk-label",
+				"moderator-toolkit-review-changes-major-changes-label",
+				"moderator-toolkit-review-changes-menu-about",
+				"moderator-toolkit-review-changes-menu-button-label",
+				"moderator-toolkit-review-changes-menu-personalization",
+				"moderator-toolkit-review-changes-personalization-description",
+				"moderator-toolkit-review-changes-personalization-title",
+				"moderator-toolkit-review-changes-show-less-aria-label",
+				"moderator-toolkit-review-changes-show-more-aria-label",
+				"moderator-toolkit-review-changes-list-card-aria-label",
+				"moderator-toolkit-review-changes-list-card-no-comment-message",
+				"moderator-toolkit-review-changes-subheader-info"
 			],
 			"dependencies": [
 				"vue",
@@ -103,13 +147,161 @@
 				"user.options",
 				"ext.personalDashboard.common"
 			]
+		},
+		"ext.moderatorToolkit.menuIcon": {
+			"class": "MediaWiki\\ResourceLoader\\OOUIIconPackModule",
+			"selectorWithVariant": ".vector-icon.mw-ui-icon-wikimedia-{name}-{variant}",
+			"selectorWithoutVariant": ".vector-icon.mw-ui-icon-wikimedia-{name}, .minerva-icon--{name}",
+			"useMaskImage": true,
+			"icons": [
+				"viewCompact"
+			]
+		},
+		"ext.moderatorToolkit.blueDot": {
+			"localBasePath": "resources/ext.moderatorToolkit.blueDot",
+			"remoteExtPath": "ModeratorToolkit/resources/ext.moderatorToolkit.blueDot",
+			"dependencies": [
+				"mediawiki.pulsatingdot"
+			],
+			"packageFiles": [
+				"index.js"
+			],
+			"styles": [
+				"dots.less"
+			]
+		},
+		"ext.moderatorToolkit.onboarding": {
+			"localBasePath": "resources/ext.moderatorToolkit.onboarding",
+			"remoteExtPath": "ModeratorToolkit/resources/ext.moderatorToolkit.onboarding",
+			"dependencies": [
+				"vue",
+				"ext.personalDashboard.common"
+			],
+			"messages": [
+				"moderator-toolkit-onboarding-title",
+				"moderator-toolkit-onboarding-get-started-button",
+				"moderator-toolkit-onboarding-step-1-body",
+				"moderator-toolkit-onboarding-step-1-alt",
+				"moderator-toolkit-onboarding-step-2-title",
+				"moderator-toolkit-onboarding-step-3-title",
+				"moderator-toolkit-onboarding-step-3-body",
+				"moderator-toolkit-onboarding-step-3-alt"
+			],
+			"packageFiles": [
+				"App.vue"
+			]
+		},
+		"ext.moderatorToolkit.impact": {
+			"localBasePath": "resources/ext.moderatorToolkit.impact",
+			"remoteExtPath": "ModeratorToolkit/resources/ext.moderatorToolkit.impact",
+			"class": "MediaWiki\\ResourceLoader\\CodexModule",
+			"codexComponents": [
+				"CdxButton",
+				"CdxIcon",
+				"CdxPopover"
+			],
+			"dependencies": [
+				"vue"
+			],
+			"messages": [
+				"moderator-toolkit-impact-thanks-sent",
+				"moderator-toolkit-impact-edits-reviewed",
+				"moderator-toolkit-impact-edits-reviewed-description",
+				"moderator-toolkit-impact-info-button"
+			],
+			"packageFiles": [
+				"App.vue",
+				{
+					"name": "icons.json",
+					"callback": "MediaWiki\\ResourceLoader\\CodexModule::getIcons",
+					"callbackParam": [
+						"cdxIconCheckAll",
+						"cdxIconInfo",
+						"cdxIconInfoFilled",
+						"cdxIconUserTalk"
+					]
+				}
+			]
+		},
+		"ext.moderatorToolkit.activeDiscussions": {
+			"localBasePath": "resources/ext.moderatorToolkit.activeDiscussions",
+			"remoteExtPath": "ModeratorToolkit/resources/ext.moderatorToolkit.activeDiscussions",
+			"class": "MediaWiki\\ResourceLoader\\CodexModule",
+			"codexComponents": [
+				"CdxIcon"
+			],
+			"packageFiles": [
+				"App.vue",
+				"components/ListCard.vue",
+				"composables/useActiveDiscussionsFeed.js",
+				{
+					"name": "icons.json",
+					"callback": "MediaWiki\\ResourceLoader\\CodexModule::getIcons",
+					"callbackParam": [
+						"cdxIconUserAvatar",
+						"cdxIconSpeechBubble"
+					]
+				}
+			],
+			"messages": [
+				"moderator-toolkit-active-discussions-latest-comment",
+				"moderator-toolkit-active-discussions-fetch-error",
+				"moderator-toolkit-active-discussions-in-topic",
+				"comma-separator",
+				"moderator-toolkit-active-discussions-show-more-aria-label",
+				"moderator-toolkit-active-discussions-show-less-aria-label"
+			],
+			"dependencies": [
+				"vue",
+				"mediawiki.util",
+				"ext.personalDashboard.common"
+			]
+		}
+	},
+	"config": {
+		"PersonalDashboardUserMenu": {
+			"description": "Show a link to the Personal Dashboard in the user menu.",
+			"value": true
+		},
+		"PersonalDashboardMinimumEdits": {
+			"description": "The minimum number of edits required to show the menu link. This has no effect if `$wgPersonalDashboardUserMenu = false`.",
+			"value": 0
+		},
+		"PersonalDashboardMaximumEdits": {
+			"description": "The maximum number of edits required to show the menu link. This has no effect if `$wgPersonalDashboardUserMenu = false`",
+			"value": 0
+		},
+		"PersonalDashboardBlueDot": {
+			"description": "Show a blue dot inviting users to try out the dashboard. This has no effect if `$wgPersonalDashboardUserMenu = false` or a user does not meet the `$wgPersonalDashboardMinimum/MaximumEdits` threshold.",
+			"value": true
 		}
 	},
 	"attributes": {
 		"PersonalDashboard": {
 			"Modules": {
-				"policiesGuidelines": {
+				"ext.moderatorToolkit.activeDiscussions": {
+					"class": "MediaWiki\\Extension\\ModeratorToolkit\\Modules\\ActiveDiscussions"
+				},
+				"ext.moderatorToolkit.banner": {
+					"class": "MediaWiki\\Extension\\ModeratorToolkit\\Modules\\Banner"
+				},
+				"ext.moderatorToolkit.impact": {
+					"class": "MediaWiki\\Extension\\ModeratorToolkit\\Modules\\Impact",
+					"services": [
+						"ConnectionProvider"
+					]
+				},
+				"ext.moderatorToolkit.onboarding": {
+					"class": "MediaWiki\\Extension\\ModeratorToolkit\\Modules\\Onboarding",
+					"services": [
+						"UserOptionsManager"
+					]
+				},
+				"ext.moderatorToolkit.policiesGuidelines": {
 					"class": "MediaWiki\\Extension\\ModeratorToolkit\\Modules\\PoliciesGuidelines"
+				},
+				"ext.moderatorToolkit.returnToHomepage": {
+					"class": "MediaWiki\\Extension\\ModeratorToolkit\\Modules\\ReturnToHomepage"
 				},
 				"ext.moderatorToolkit.reviewChanges": {
 					"class": "MediaWiki\\Extension\\ModeratorToolkit\\Modules\\ReviewChanges",
@@ -120,17 +312,48 @@
 			},
 			"ModuleGroups": {
 				"moderators": {
-					"description": "Modules for the moderator dashboard.",
+					"description": "The Moderator Tools Personal Dashboard experience",
 					"version": 0,
+					"betaFeedback": "https://wikimediafoundation.limesurvey.net/179424?lang=$1",
 					"groups": [
 						{
+							"name": "utils",
+							"enabled": true,
+							"hidden": true,
+							"subgroups": [
+								{
+									"name": "startup",
+									"enabled": true,
+									"modules": [
+										{
+											"name": "ext.moderatorToolkit.onboarding",
+											"enabled": true
+										}
+									]
+								}
+							]
+						},
+						{
 							"name": "main",
+							"enabled": true,
 							"subgroups": [
 								{
 									"name": "primary",
+									"enabled": true,
 									"modules": [
 										{
+											"name": "ext.moderatorToolkit.banner",
+											"enabled": true
+										},
+										{
 											"name": "ext.moderatorToolkit.reviewChanges",
+											"slug": "review",
+											"enabled": true,
+											"style": "thin"
+										},
+										{
+											"name": "ext.moderatorToolkit.activeDiscussions",
+											"slug": "discussions",
 											"enabled": true,
 											"style": "thin"
 										}
@@ -140,15 +363,55 @@
 						},
 						{
 							"name": "sidebar",
+							"enabled": true,
 							"subgroups": [
+								{
+									"name": "primary",
+									"enabled": true,
+									"modules": [
+										{
+											"name": "ext.moderatorToolkit.impact",
+											"slug": "impact",
+											"enabled": true
+										}
+									]
+								},
 								{
 									"name": "secondary",
 									"enabled": true,
 									"modules": [
 										{
-											"name": "policiesGuidelines",
-											"enabled": true,
-											"styleMobile": "minimized"
+											"name": "ext.moderatorToolkit.policiesGuidelines",
+											"slug": "policies",
+											"enabled": true
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				"review-changes-home": {
+					"description": "Treatment group for the Review Changes in Home experiment",
+					"version": 0,
+					"betaFeedback": "https://wikimediafoundation.limesurvey.net/179424?lang=$1",
+					"groups": [
+						{
+							"name": "main",
+							"enabled": true,
+							"subgroups": [
+								{
+									"name": "primary",
+									"enabled": true,
+									"modules": [
+										{
+											"name": "ext.moderatorToolkit.reviewChanges",
+											"slug": "review",
+											"enabled": true
+										},
+										{
+											"name": "ext.moderatorToolkit.returnToHomepage",
+											"enabled": true
 										}
 									]
 								}
@@ -156,7 +419,10 @@
 						}
 					]
 				}
-			}
+			},
+			"SlugAliasFiles": [
+				"ModeratorToolkitAlias"
+			]
 		}
 	},
 	"manifest_version": 2

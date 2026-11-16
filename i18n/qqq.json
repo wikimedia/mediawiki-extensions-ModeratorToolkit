@@ -1,8 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"MusikAnimal"
+			"MusikAnimal",
+			"Dillon Hardy",
+			"Jsn.sherman"
 		]
 	},
-	"moderator-toolkit-desc": "{{desc|name=ModeratorToolkit|url=https://www.mediawiki.org/wiki/Extension:ModeratorToolkit}}"
+	"moderator-toolkit-desc": "{{desc|name=ModeratorToolkit|url=https://www.mediawiki.org/wiki/Extension:ModeratorToolkit}}",
+	"moderator-toolkit-link-title": "Title for the Special:PersonalDashboard link in the user menu.",
+	"moderator-toolkit-specialpage-title": "Title for Special:PersonalDashboard, which is a place for users to access useful tools about contributing. Parameters:\n* $1 - Name of the current user. Can be used with GENDER.\n\n{{doc-personal-dashboard}}",
+	"tooltip-pt-personaldashboard": "Tooltip shown when hovering the mouse over the link to your own PersonalDashboard in the upper-side personal toolbox.\n\n{{doc-personal-dashboard}}"
 }

@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eduardoaddad"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "Revisar alterações",
+	"moderator-toolkit-review-changes-subheader-info": "Ajude a manter a confiabilidade da Wikipédia.",
+	"moderator-toolkit-review-changes-footer-preamble": "Veja mais edições na [{{fullurl:Special:RecentChanges|revertrisklanguageagnostic=all}} página de alterações recentes]",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "Sem resumo da edição"
+}

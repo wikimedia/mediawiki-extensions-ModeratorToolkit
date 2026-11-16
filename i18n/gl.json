@@ -4,5 +4,8 @@
 			"Toliño"
 		]
 	},
-	"moderator-toolkit-desc": "Un panel experimental para a moderación"
+	"moderator-toolkit-desc": "Un panel experimental para a moderación",
+	"moderator-toolkit-link-title": "Panel de control",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1|Ola}}, {{bidi:$1}}!",
+	"tooltip-pt-personaldashboard": "{{GENDER:|O teu}} panel persoal"
 }

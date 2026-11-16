@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cobija",
+			"Rapsar"
+		]
+	},
+	"moderator-toolkit-active-discussions-title": "Etkin tartışmalar",
+	"moderator-toolkit-active-discussions-fetch-error": "Etkin tartışma bulunamadı"
+}

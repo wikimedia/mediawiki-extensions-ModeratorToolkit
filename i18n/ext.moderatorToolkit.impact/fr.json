@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Escargot bleu"
+		]
+	},
+	"moderator-toolkit-impact-title": "Votre impact",
+	"moderator-toolkit-impact-thanks-sent": "Remerciements envoyés",
+	"moderator-toolkit-impact-edits-reviewed": "Modifications relues",
+	"moderator-toolkit-impact-edits-reviewed-description": "Compte les modifications que vous avez annulées et les remerciements que vous avez envoyés.",
+	"moderator-toolkit-impact-info-button": "Info"
+}

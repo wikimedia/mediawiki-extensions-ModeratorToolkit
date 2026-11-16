@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eduardoaddad"
+		]
+	},
+	"moderator-toolkit-link-title": "Painel de controle",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1|Olá}}, {{bidi:$1}}!",
+	"tooltip-pt-personaldashboard": "{{GENDER:|Seu}} painel de controle pessoal"
+}

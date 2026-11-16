@@ -31,6 +31,7 @@ class ReviewChangesTest extends MediaWikiUnitTestCase {
 		$context->method( 'msg' )->willReturnCallback( function ( $key ) {
 			$message = $this->createMock( Message::class );
 			$message->method( 'text' )->willReturn( 'text-' . $key );
+			$message->method( 'parse' )->willReturn( 'parse-' . $key );
 			return $message;
 		} );
 
@@ -63,8 +64,29 @@ class ReviewChangesTest extends MediaWikiUnitTestCase {
 		$module = TestingAccessWrapper::newFromObject( $this->newModule( null ) );
 
 		$this->assertSame(
-			'text-personal-dashboard-risky-article-edits-header',
+			'text-moderator-toolkit-review-changes-header',
 			$module->getHeaderText()
+		);
+	}
+
+	public function testRendersTheNoJsFallbackFooter() {
+		$module = TestingAccessWrapper::newFromObject( $this->newModule( null ) );
+
+		$footer = $module->getFooter();
+
+		$this->assertStringContainsString( 'personal-dashboard-module-no-js-fallback', $footer );
+		$this->assertStringContainsString(
+			'parse-moderator-toolkit-review-changes-footer-preamble',
+			$footer
+		);
+	}
+
+	public function testLoadsTheStylesThatHideTheFooterUpfront() {
+		$module = TestingAccessWrapper::newFromObject( $this->newModule( null ) );
+
+		$this->assertSame(
+			[ 'ext.moderatorToolkit.reviewChanges.styles' ],
+			$module->getModuleStyles()
 		);
 	}
 
@@ -72,6 +94,12 @@ class ReviewChangesTest extends MediaWikiUnitTestCase {
 		$module = TestingAccessWrapper::newFromObject( $this->newModule( null ) );
 
 		$this->assertSame( [ 'ext.moderatorToolkit.reviewChanges' ], $module->getModules() );
+	}
+
+	public function testShowsTheFeedProgressBarWhileTheIslandLoads() {
+		$module = TestingAccessWrapper::newFromObject( $this->newModule( null ) );
+
+		$this->assertStringContainsString( 'cdx-progress-bar--inline', $module->getLoadingMarkup() );
 	}
 
 	public function testDeclaresHeaderMenuSoTheFrameEmitsAHeaderMountSlot() {

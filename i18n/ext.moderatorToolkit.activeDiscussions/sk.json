@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"KormiSK",
+			"Wizzard"
+		]
+	},
+	"moderator-toolkit-active-discussions-title": "Aktívne diskusie",
+	"moderator-toolkit-active-discussions-latest-comment": "Posledný komentár:",
+	"moderator-toolkit-active-discussions-fetch-error": "Nenašli sa žiadne aktívne diskusie",
+	"moderator-toolkit-active-discussions-in-topic": "$1 v $2"
+}

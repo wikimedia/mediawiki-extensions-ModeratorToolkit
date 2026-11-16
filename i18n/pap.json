@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kallmemel"
+		]
+	},
+	"moderator-toolkit-link-title": "Dèshbort",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1|Haló}}, {{bidi:$1}}!",
+	"tooltip-pt-personaldashboard": "{{GENDER:|Bo}} dèshbort personal"
+}

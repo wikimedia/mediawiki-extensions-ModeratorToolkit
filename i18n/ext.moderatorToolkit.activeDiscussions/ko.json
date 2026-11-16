@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Suleiman the Magnificent Television",
+			"Tensama0415"
+		]
+	},
+	"moderator-toolkit-active-discussions-title": "활성화된 토론",
+	"moderator-toolkit-active-discussions-latest-comment": "최신 댓글:",
+	"moderator-toolkit-active-discussions-fetch-error": "활성화된 토론이 없습니다"
+}

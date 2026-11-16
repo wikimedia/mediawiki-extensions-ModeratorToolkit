@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Repakr"
+		]
+	},
+	"moderator-toolkit-impact-title": "Ваш вплив",
+	"moderator-toolkit-impact-thanks-sent": "Подяк відправлено",
+	"moderator-toolkit-impact-edits-reviewed": "Редагувань перевірено",
+	"moderator-toolkit-impact-edits-reviewed-description": "Враховує редагування, які Ви відкотили за останні 30 днів, та усі подяки, які Ви відправили.",
+	"moderator-toolkit-impact-info-button": "Інформація"
+}

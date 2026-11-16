@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nemoralis"
+		]
+	},
+	"moderator-toolkit-active-discussions-title": "Aktiv müzakirələr",
+	"moderator-toolkit-active-discussions-latest-comment": "Son şərh:",
+	"moderator-toolkit-active-discussions-fetch-error": "Aktiv müzakirə tapılmadı",
+	"moderator-toolkit-active-discussions-in-topic": "$1, \"$2\" mövzusunda",
+	"moderator-toolkit-active-discussions-show-more-aria-label": "Daha aktiv müzakirələri göstər",
+	"moderator-toolkit-active-discussions-show-less-aria-label": "Daha az aktiv müzakirə göstər"
+}

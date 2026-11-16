@@ -1,0 +1,7 @@
+// The footer is entirely a no-JS fallback (ReviewChanges::getFooter()), so
+// hiding its inner content leaves an empty section. Collapse the whole section
+// under JS from this upfront stylesheet (not the lazy island CSS) so no gap
+// flashes before the client footer mounts.
+.client-js .personal-dashboard-module-reviewChanges .personal-dashboard-module-section-footer {
+	display: none;
+}

@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"GuoPC",
+			"Peterxy",
+			"Peterxy12",
+			"Plana"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "检查更改",
+	"moderator-toolkit-review-changes-subheader-info": "这些编辑是由其他用户做出的。请及时了解最新动态并审核这些编辑来帮助维持维基百科的质量。",
+	"moderator-toolkit-review-changes-footer-preamble": "在[{{fullurl:Special:RecentChanges|revertrisklanguageagnostic=all}} 最近更改页面]查看更多编辑内容",
+	"moderator-toolkit-review-changes-list-card-aria-label": "打开$1的差异视图",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "无编辑摘要",
+	"moderator-toolkit-review-changes-empty": "未找到更改",
+	"moderator-toolkit-review-changes-major-changes-label": "重大更改",
+	"moderator-toolkit-review-changes-high-revert-risk-label": "高回退风险",
+	"moderator-toolkit-review-changes-menu-button-label": "检查更改的更多选项",
+	"moderator-toolkit-review-changes-menu-personalization": "个性化",
+	"moderator-toolkit-review-changes-menu-about": "关于检查更改",
+	"moderator-toolkit-review-changes-personalization-title": "个性化检查更改",
+	"moderator-toolkit-review-changes-personalization-description": "根据您编辑活动所提出的相关更改建议。[https://www.mediawiki.org/wiki/Home/Recommendations#Review_Changes 了解更多]",
+	"moderator-toolkit-review-changes-show-more-aria-label": "显示更多待检查的更改",
+	"moderator-toolkit-review-changes-show-less-aria-label": "显示更少待检查的更改"
+}

@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Meno25",
+			"Mohammed Qays"
+		]
+	},
+	"moderator-toolkit-impact-title": "تأثيرك",
+	"moderator-toolkit-impact-thanks-sent": "تم إرسال الشكر",
+	"moderator-toolkit-impact-edits-reviewed": "تمت مراجعة التعديلات",
+	"moderator-toolkit-impact-edits-reviewed-description": "يحسب التعديلات التي قمت بإلغاءها في آخر 30 يومًا وجميع رسائل الشكر التي أرسلتها.",
+	"moderator-toolkit-impact-info-button": "معلومات"
+}

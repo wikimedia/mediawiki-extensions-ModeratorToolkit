@@ -4,5 +4,8 @@
 			"Meno25"
 		]
 	},
-	"moderator-toolkit-desc": "لوحة تحكم تجريبية للمشرفين"
+	"moderator-toolkit-desc": "لوحة تحكم تجريبية للمشرفين",
+	"moderator-toolkit-link-title": "لوحة التحكم",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1| مرحباً}}، {{bidi: $1}}!",
+	"tooltip-pt-personaldashboard": "لوحة التحكم الشخصية {{GENDER:|بك}}"
 }

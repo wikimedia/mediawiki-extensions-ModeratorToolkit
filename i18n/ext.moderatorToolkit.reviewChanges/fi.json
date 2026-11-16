@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Samoasambia",
+			"Wikipeedikko"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "Tarkasta muutoksia",
+	"moderator-toolkit-review-changes-subheader-info": "Nämä muokkaukset ovat muiden käyttäjien tekemiä. Auta pitämään Wikipedia luotettavana tarkistamalla ne.",
+	"moderator-toolkit-review-changes-footer-preamble": "Katso lisää muokkauksia  [{{fullurl:Special:RecentChanges|revertrisklanguageagnostic=all}} Tuoreet muutokset -sivulla]",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "Ei muokkausyhteenvetoa",
+	"moderator-toolkit-review-changes-major-changes-label": "Suuret muutokset",
+	"moderator-toolkit-review-changes-show-more-aria-label": "Näytä enemmän tarkistettavia muutoksia",
+	"moderator-toolkit-review-changes-show-less-aria-label": "Näytä vähemmän tarkistettavia muutoksia"
+}

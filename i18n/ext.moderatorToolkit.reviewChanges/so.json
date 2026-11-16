@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"AhmedG612"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "Dib u eeg isbeddellada",
+	"moderator-toolkit-review-changes-subheader-info": "Wax ka beddelladan waxaa sameeyey isticmaaleyaal kale. La soco wixii cusub, kana qayb qaado caawinta tayada Wikipedia adigoo dib u eegaya.",
+	"moderator-toolkit-review-changes-footer-preamble": "Eeg isbeddello dheeraad ah bogga [{{fullurl:Special:RecentChanges|revertrisklanguageagnostic=all}} isbeddellada ugu dambeeyay]",
+	"moderator-toolkit-review-changes-list-card-aria-label": "Fur muuqalka kala duwanaanshaha ee $1",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "Ma jiro koobitaanka wax ka beddelka",
+	"moderator-toolkit-review-changes-empty": "Wax isbeddel ah lama helin",
+	"moderator-toolkit-review-changes-major-changes-label": "Isbeddello waaweyn",
+	"moderator-toolkit-review-changes-high-revert-risk-label": "Khatar sare oo dib u celin ah",
+	"moderator-toolkit-review-changes-menu-button-label": "Ikhtiyaarro dheeraad ah oo loogu talagalay Dib u eegista isbeddellada",
+	"moderator-toolkit-review-changes-menu-personalization": "Shakhsiyeyn",
+	"moderator-toolkit-review-changes-menu-about": "Ku saabsan Dib u eegista isbeddellada",
+	"moderator-toolkit-review-changes-personalization-title": "Shakhsiyey Dib u eegista isbeddellada",
+	"moderator-toolkit-review-changes-personalization-description": "Waxay soo jeedinaysaa isbeddello khuseeya iyadoo ku salaynaysa hawshaada tifaftirka. [https://www.mediawiki.org/wiki/Home/Recommendations#Review_Changes Wax badan ka baro]",
+	"moderator-toolkit-review-changes-show-more-aria-label": "Muuji isbeddello dheeraad ah oo dib loo eego",
+	"moderator-toolkit-review-changes-show-less-aria-label": "Muuji isbeddello yar oo dib loo eego"
+}

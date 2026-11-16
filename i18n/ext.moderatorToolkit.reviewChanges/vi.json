@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hide on Rosé",
+			"Veritas Sapientiae"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "Xem xét các thay đổi",
+	"moderator-toolkit-review-changes-subheader-info": "Những sửa đổi này được thực hiện bởi những người dùng khác. Hãy cập nhật thông tin và giúp duy trì chất lượng Wikipedia bằng cách kiểm tra chúng.",
+	"moderator-toolkit-review-changes-footer-preamble": "Xem thêm các sửa đổi khác tại [{{fullurl:Special:RecentChanges|revertrisklanguageagnostic=all}} trang thay đổi gần đây]",
+	"moderator-toolkit-review-changes-list-card-aria-label": "Mở giao diện xem khác biệt cho $1",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "Không có tóm lược sửa đổi",
+	"moderator-toolkit-review-changes-major-changes-label": "Thay đổi lớn"
+}

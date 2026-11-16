@@ -2,7 +2,11 @@
 	<feed-card
 		class="moderator-toolkit-review-changes__card"
 		:url="diffUrl"
+		open-in-new-tab
+		mark-visited
+		overlay-link
 		:aria-label="diffLinkAriaLabel"
+		:data-feedorigin="feedorigin"
 	>
 		<template #header>
 			<span
@@ -98,6 +102,7 @@ const { defineComponent, defineAsyncComponent } = require( 'vue' );
 const { CdxIcon, CdxInfoChip } = require( '../codex.js' );
 const { FeedCard, utils } = require( 'ext.personalDashboard.common' );
 const { formatTimestamp, stripMarkup } = utils;
+const { instrumentCards } = require( '../instrumentation.js' );
 const { cdxIconNotice, cdxIconUserAvatar, cdxIconUserTemporary } = require( '../icons.json' );
 const MAJOR_CHANGE_DELTA = 1000;
 // Start of the origin parameter that the diff link carries. The diff page reads
@@ -143,7 +148,7 @@ module.exports = defineComponent( {
 	setup() {
 		return {
 			showUserInfoCard: mw.user.options.get( 'checkuser-userinfocard-enable' ),
-			noEditSummaryText: mw.msg( 'personal-dashboard-risky-article-edits-list-card-no-comment-message' )
+			noEditSummaryText: mw.msg( 'moderator-toolkit-review-changes-list-card-no-comment-message' )
 		};
 	},
 	computed: {
@@ -157,7 +162,7 @@ module.exports = defineComponent( {
 			return new mw.Title( this.title ).getUrl( params );
 		},
 		diffLinkAriaLabel() {
-			return mw.msg( 'personal-dashboard-risky-article-edits-list-card-aria-label', this.title );
+			return mw.msg( 'moderator-toolkit-review-changes-list-card-aria-label', this.title );
 		},
 		pageUrl() {
 			return new mw.Title( this.title ).getUrl();
@@ -200,7 +205,7 @@ module.exports = defineComponent( {
 					status: 'warning',
 					// Codex supplies the icon for every status but notice.
 					icon: null,
-					label: mw.msg( 'personal-dashboard-review-changes-high-revert-risk-label' )
+					label: mw.msg( 'moderator-toolkit-review-changes-high-revert-risk-label' )
 				} );
 			}
 
@@ -209,41 +214,42 @@ module.exports = defineComponent( {
 					key: 'major-change',
 					status: 'notice',
 					icon: cdxIconNotice,
-					label: mw.msg( 'personal-dashboard-review-changes-major-changes-label' )
+					label: mw.msg( 'moderator-toolkit-review-changes-major-changes-label' )
 				} );
 			}
 
 			return flags;
 		}
+	},
+	mounted() {
+		instrumentCards();
 	}
 } );
 </script>
 
 <style lang="less">
 @import 'mediawiki.skin.variables.less';
+@import 'mediawiki.mixins';
 
-// The card chrome (the whole-card link, the visited state and the row layout)
-// lives in FeedCard; only what is specific to a Review Changes item is here.
+// FeedCard.vue and feed.less have the card chrome. This file styles only what is
+// specific to a Review Changes item.
 .moderator-toolkit-review-changes__card {
-	.personal-dashboard-feed__card__container &__icon .cdx-icon,
-	.cdx-button:enabled {
-		color: inherit;
+	// The edit details use the page title color, not the Codex gray.
+	.cdx-card__text__description {
+		&,
+		.cdx-icon {
+			color: inherit;
+		}
 	}
 
 	&__username {
 		font-weight: @font-weight-bold;
 	}
 
-	// The title is never cut short. A long title flows onto the next line, and a
-	// word that is longer than the line breaks instead of overflowing the card.
-	&__title {
-		overflow-wrap: anywhere;
-	}
-
 	&__username,
 	&__timestamp {
 		overflow: hidden;
-		text-overflow: ellipsis;
+		text-overflow: @text-overflow-ellipsis;
 		white-space: nowrap;
 	}
 
@@ -253,7 +259,7 @@ module.exports = defineComponent( {
 		display: flex;
 		align-items: center;
 		gap: @spacing-25;
-		min-width: 0;
+		min-width: @size-0;
 	}
 
 	&__meta {
@@ -261,6 +267,8 @@ module.exports = defineComponent( {
 		flex-shrink: 0;
 		align-items: center;
 		gap: @spacing-25;
+		// Not wider than the card, so a long timestamp gets its ellipsis.
+		max-width: @size-full;
 	}
 
 	&__icon {
@@ -268,7 +276,8 @@ module.exports = defineComponent( {
 	}
 
 	&__icon .cdx-button:enabled {
-		margin-left: -6px;
+		.cdx-mixin-button-layout-flush( 'start', true );
+		color: inherit;
 	}
 
 	// FeedCard lays the header out as a centred row. The description stays
@@ -283,11 +292,11 @@ module.exports = defineComponent( {
 	}
 
 	// The page description keeps to a single line; a long one is cut short. The
-	// weight is reset because FeedCard emboldens the header for the title.
+	// weight is reset because the Codex card title is bold.
 	&__description {
 		font-weight: @font-weight-normal;
 		overflow: hidden;
-		text-overflow: ellipsis;
+		text-overflow: @text-overflow-ellipsis;
 		white-space: nowrap;
 	}
 

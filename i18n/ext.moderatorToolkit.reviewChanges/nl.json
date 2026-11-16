@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"HanV",
+			"McDutchie",
+			"Siebrand"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "Wijzigingen controleren",
+	"moderator-toolkit-review-changes-subheader-info": "Deze bewerkingen zijn door andere gebruikers uitgevoerd. Blijf op de hoogte en help de kwaliteit van Wikipedia te behouden door ze te beoordelen.",
+	"moderator-toolkit-review-changes-footer-preamble": "Bekijk meer bewerkingen op de [{{fullurl:Special:RecentChanges|revertrisklanguageagnostic=all}} pagina met recente wijzigingen]",
+	"moderator-toolkit-review-changes-list-card-aria-label": "Open de diff-weergave voor $1",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "Geen bewerkingssamenvatting",
+	"moderator-toolkit-review-changes-empty": "Geen wijzigingen gevonden",
+	"moderator-toolkit-review-changes-major-changes-label": "Grote wijzigingen",
+	"moderator-toolkit-review-changes-high-revert-risk-label": "Hoog risico op terugdraaien",
+	"moderator-toolkit-review-changes-menu-button-label": "Meer opties voor het beoordelen van wijzigingen",
+	"moderator-toolkit-review-changes-menu-personalization": "Personalisatie",
+	"moderator-toolkit-review-changes-menu-about": "Over wijzigingen beoordelen",
+	"moderator-toolkit-review-changes-personalization-title": "Wijzigingen beoordelen personaliseren",
+	"moderator-toolkit-review-changes-personalization-description": "Stelt relevante wijzigingen voor op basis van uw bewerkingsactiviteit. [https://www.mediawiki.org/wiki/Home/Recommendations#Review_Changes Meer informatie]"
+}

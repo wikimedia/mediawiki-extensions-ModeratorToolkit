@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"PanWor",
+			"Woytecr"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "Przejrzyj zmiany",
+	"moderator-toolkit-review-changes-subheader-info": "Te edycje zostały wykonane przez innych użytkowników. Bądź na bieżąco i pomóż utrzymywać wiarygodność Wikipedii, sprawdzając je.",
+	"moderator-toolkit-review-changes-footer-preamble": "Więcej edycji znajdziesz na [{{fullurl:Special:RecentChanges|revertrisklanguageagnostic=all}} stronie ostatnich zmian]",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "Nie podano opisu zmian",
+	"moderator-toolkit-review-changes-menu-button-label": "Więcej opcji przeglądania zmian",
+	"moderator-toolkit-review-changes-menu-personalization": "Personalizacja",
+	"moderator-toolkit-review-changes-menu-about": "O przeglądaniu zmian",
+	"moderator-toolkit-review-changes-personalization-title": "Personalizuj przeglądanie zmian"
+}

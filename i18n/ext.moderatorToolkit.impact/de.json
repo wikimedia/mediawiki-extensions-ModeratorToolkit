@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"moderator-toolkit-impact-title": "Dein Beitrag",
+	"moderator-toolkit-impact-thanks-sent": "Danke gesendet",
+	"moderator-toolkit-impact-edits-reviewed": "Bearbeitungen geprüft",
+	"moderator-toolkit-impact-edits-reviewed-description": "Zählt die Änderungen, die du in den letzten 30 Tagen rückgängig gemacht hast, und die Danksagungen, die du gesendet hast.",
+	"moderator-toolkit-impact-info-button": "Information"
+}

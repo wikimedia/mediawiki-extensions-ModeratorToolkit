@@ -1,8 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Suleiman the Magnificent Television"
+			"Suleiman the Magnificent Television",
+			"Tensama0415",
+			"Ykhwong"
 		]
 	},
-	"moderator-toolkit-desc": "중재자를 위한 실험적인 대시보드"
+	"moderator-toolkit-desc": "중재자를 위한 실험적인 대시보드",
+	"moderator-toolkit-link-title": "대시보드",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1|안녕하세요}}, {{bidi:$1}}님!",
+	"tooltip-pt-personaldashboard": "{{GENDER:|당신의}} 개인 대시보드"
 }

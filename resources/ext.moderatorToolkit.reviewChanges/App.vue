@@ -1,11 +1,12 @@
 <template>
 	<feed-panel
 		v-bind="{ ...$attrs, ...feedState }"
-		module-name="ext.moderatorToolkit.reviewChanges"
 		:is-narrow="isNarrow"
 		summary-mode="card"
-		:footer-label="footerLabel"
-		:progress-bar-aria-label="progressBarAriaLabel"
+		expand-in-place
+		:show-more-aria-label
+		:show-less-aria-label
+		:empty-label="emptyLabel"
 		@load-more="loadMore"
 	>
 		<!-- Renamed, because isNarrow is a prop of this component as well.
@@ -69,10 +70,8 @@ module.exports = defineComponent( {
 		ModuleHeaderMenu,
 		PersonalizationPanel
 	},
-	// The compact/full island props (detail, focused, active) are never declared
-	// here: they ride in $attrs and are forwarded untouched to the scaffold,
-	// which owns the compact/full derivation. This module only decides which
-	// rule it follows, via summary-mode, and hands over the feed contract.
+	// FeedPanel gets the module route and the island props detail, focused,
+	// and active through $attrs.
 	inheritAttrs: false,
 	props: {
 		// Selector for the mount slot in the server-rendered module header, or
@@ -114,7 +113,7 @@ module.exports = defineComponent( {
 			menuItems: [
 				{
 					value: 'personalization',
-					label: mw.msg( 'personal-dashboard-review-changes-menu-personalization' ),
+					label: mw.msg( 'moderator-toolkit-review-changes-menu-personalization' ),
 					icon: cdxIconConfigure
 				}
 			],
@@ -122,11 +121,12 @@ module.exports = defineComponent( {
 			// above it, and that is what Codex gives a menu footer.
 			menuFooterItem: {
 				value: 'about',
-				label: mw.msg( 'personal-dashboard-review-changes-menu-about' )
+				label: mw.msg( 'moderator-toolkit-review-changes-menu-about' )
 			},
-			footerLabel: mw.msg( 'personal-dashboard-risky-article-edits-mobile-summary-footer-link-text' ),
-			progressBarAriaLabel: mw.msg( 'personal-dashboard-risky-article-edits-progress-bar-aria-label' ),
-			menuButtonAriaLabel: mw.msg( 'personal-dashboard-review-changes-menu-button-label' )
+			showMoreAriaLabel: mw.msg( 'moderator-toolkit-review-changes-show-more-aria-label' ),
+			showLessAriaLabel: mw.msg( 'moderator-toolkit-review-changes-show-less-aria-label' ),
+			emptyLabel: mw.msg( 'moderator-toolkit-review-changes-empty' ),
+			menuButtonAriaLabel: mw.msg( 'moderator-toolkit-review-changes-menu-button-label' )
 		};
 	},
 	mounted() {

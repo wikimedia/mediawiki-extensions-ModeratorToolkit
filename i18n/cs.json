@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mormegil"
+		]
+	},
+	"moderator-toolkit-link-title": "Řídicí panel",
+	"moderator-toolkit-specialpage-title": "Vítejte, {{GENDER:$1|uživateli|uživatelko}} {{bidi:$1}}!",
+	"tooltip-pt-personaldashboard": "{{GENDER:|Váš}} osobní řídicí panel"
+}

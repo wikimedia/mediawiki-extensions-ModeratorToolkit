@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"KormiSK",
+			"Wizzard"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "Posúdiť zmeny",
+	"moderator-toolkit-review-changes-subheader-info": "Tieto úpravy vykonali iní používatelia. Majte prehľad a pomôžte udržiavať kvalitu Wikipédie tým, že ich posúdite.",
+	"moderator-toolkit-review-changes-footer-preamble": "Ďalšie úpravy nájdete na [{{fullurl:Special:RecentChanges|revertrisklanguageagnostic=all}} stránke posledných úprav]",
+	"moderator-toolkit-review-changes-list-card-aria-label": "Otvoriť zobrazenie rozdielov pre $1",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "Bez zhrnutia úpravy",
+	"moderator-toolkit-review-changes-empty": "Nenašli sa žiadne zmeny",
+	"moderator-toolkit-review-changes-major-changes-label": "Veľké zmeny",
+	"moderator-toolkit-review-changes-high-revert-risk-label": "Vysoké riziko revertu",
+	"moderator-toolkit-review-changes-menu-button-label": "Ďalšie možnosti pre Kontrolu zmien",
+	"moderator-toolkit-review-changes-menu-personalization": "Prispôsobenie",
+	"moderator-toolkit-review-changes-menu-about": "O Kontrole zmien",
+	"moderator-toolkit-review-changes-personalization-title": "Prispôsobiť Kontrolu zmien",
+	"moderator-toolkit-review-changes-personalization-description": "Navrhuje relevantné zmeny na základe vašej aktivity pri úpravách. [https://www.mediawiki.org/wiki/Home/Recommendations#Review_Changes Ďalšie informácie]"
+}

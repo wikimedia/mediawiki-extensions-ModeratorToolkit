@@ -1,0 +1,16 @@
+<?php
+
+declare( strict_types = 1 );
+
+namespace MediaWiki\Extension\ModeratorToolkit\HookHandler;
+
+use MediaWiki\Preferences\Hook\GetPreferencesHook;
+
+class GetPreferencesHandler implements GetPreferencesHook {
+	/** @inheritDoc */
+	public function onGetPreferences( $user, &$preferences ) {
+		$preferences['personaldashboard-eligible'] = [ 'type' => 'api' ];
+		$preferences['personaldashboard-visited'] = [ 'type' => 'api' ];
+		$preferences['moderatortoolkit-reviewchanges-personalize'] = [ 'type' => 'api' ];
+	}
+}

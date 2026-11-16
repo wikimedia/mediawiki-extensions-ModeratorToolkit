@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Woytecr"
+		]
+	},
+	"moderator-toolkit-impact-title": "Twój wpływ",
+	"moderator-toolkit-impact-thanks-sent": "Wysłanych podziękowań",
+	"moderator-toolkit-impact-edits-reviewed": "Przejrzanych edycji",
+	"moderator-toolkit-impact-edits-reviewed-description": "Zlicza cofnięte przez ciebie edycje i wysłane podziękowania.",
+	"moderator-toolkit-impact-info-button": "Informacje"
+}

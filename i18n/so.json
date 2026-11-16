@@ -4,5 +4,8 @@
 			"AhmedG612"
 		]
 	},
-	"moderator-toolkit-desc": "Dashboard tijaabo ah oo loogu talagalay dhex dhexaadiyeyaasha"
+	"moderator-toolkit-desc": "Dashboard tijaabo ah oo loogu talagalay dhex dhexaadiyeyaasha",
+	"moderator-toolkit-link-title": "Dashboard-ka",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1|Salaan}}, {{bidi:$1}}!",
+	"tooltip-pt-personaldashboard": "{{GENDER:|Dashboard-kaaga gaarka ah}}"
 }

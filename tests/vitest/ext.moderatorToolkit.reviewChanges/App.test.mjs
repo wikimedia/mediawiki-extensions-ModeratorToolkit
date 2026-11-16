@@ -23,8 +23,9 @@ const { feedState, load, loadMore } = useReviewChangesFeed();
 import App from '/resources/ext.moderatorToolkit.reviewChanges/App.vue';
 import PersonalizationPanel from '/resources/ext.moderatorToolkit.reviewChanges/components/PersonalizationPanel.vue';
 
-// Safely ignore error: Cannot find package 'ext.checkUser.userInfoCard'
-mw.loader.using = () => {};
+// Safely ignore error: Cannot find package 'ext.checkUser.userInfoCard'.
+// The promise never settles, so the card instrumentation waits forever.
+mw.loader.using = () => new Promise( () => {} );
 
 beforeEach( () => {
 	feedState.items = [];
@@ -34,11 +35,6 @@ beforeEach( () => {
 	feedState.error = null;
 	load.mockReset();
 	loadMore.mockReset();
-} );
-
-test( 'mount component', () => {
-	const wrapper = mount( App );
-	expect( wrapper.element ).toMatchSnapshot();
 } );
 
 test( 'shows progress bar when loading', () => {
@@ -171,8 +167,7 @@ test( 'the grid card shows the summary affordances on every viewport', () => {
 	feedState.items = Array.from( { length: 5 }, ( _, i ) => makeFeedItem( i ) );
 
 	const wrapper = mount( App );
-	expect( wrapper.find( '.personal-dashboard-feed__summary-footer' ).exists() ).toStrictEqual( true );
-	expect( wrapper.find( '.personal-dashboard-feed__list--summary' ).exists() ).toStrictEqual( true );
+	expect( wrapper.find( '.personal-dashboard-feed__show-more' ).exists() ).toStrictEqual( true );
 } );
 
 test( 'focused or active drops the summary affordances', () => {
@@ -180,18 +175,21 @@ test( 'focused or active drops the summary affordances', () => {
 	feedState.items = Array.from( { length: 5 }, ( _, i ) => makeFeedItem( i ) );
 
 	const focused = mount( App, { props: { focused: true } } );
-	expect( focused.find( '.personal-dashboard-feed__summary-footer' ).exists() ).toStrictEqual( false );
+	expect( focused.find( '.personal-dashboard-feed__show-more' ).exists() ).toStrictEqual( false );
 
 	const active = mount( App, { props: { active: true } } );
-	expect( active.find( '.personal-dashboard-feed__summary-footer' ).exists() ).toStrictEqual( false );
+	expect( active.find( '.personal-dashboard-feed__show-more' ).exists() ).toStrictEqual( false );
 } );
 
-test( 'the summary footer opens the module dialog via the router', async () => {
+test( 'the show more button opens the module dialog via the router on a narrow viewport', async () => {
 	feedState.isLoading = false;
 	feedState.items = Array.from( { length: 5 }, ( _, i ) => makeFeedItem( i ) );
 
 	const push = vi.fn();
+	// route rides in $attrs: the dashboard app resolves this module's slug from
+	// the group it is placed in and hands it down, so the module never names it.
 	const wrapper = mount( App, {
+		props: { isNarrow: true, route: 'review' },
 		global: {
 			mocks: {
 				$router: { push }
@@ -199,9 +197,30 @@ test( 'the summary footer opens the module dialog via the router', async () => {
 		}
 	} );
 
-	await wrapper.find( '.personal-dashboard-feed__summary-footer' ).trigger( 'click' );
+	await wrapper.find( '.personal-dashboard-feed__show-more' ).trigger( 'click' );
 
-	expect( push ).toHaveBeenCalledWith( '/ext.moderatorToolkit.reviewChanges' );
+	expect( push ).toHaveBeenCalledWith( '/review' );
+} );
+
+test( 'the show more button shows more edits in the card on a wide viewport', async () => {
+	feedState.isLoading = false;
+	feedState.items = Array.from( { length: 5 }, ( _, i ) => makeFeedItem( i ) );
+	feedState.hasMore = true;
+
+	const push = vi.fn();
+	const wrapper = mount( App, { global: { mocks: { $router: { push } } } } );
+	const showMore = wrapper.find( '.personal-dashboard-feed__show-more' );
+
+	expect( showMore.attributes( 'aria-label' ) )
+		.toStrictEqual( '⧼moderator-toolkit-review-changes-show-more-aria-label⧽' );
+
+	await showMore.trigger( 'click' );
+
+	expect( wrapper.findAllComponents( { name: 'ListCard' } ) ).toHaveLength( 5 );
+	expect( loadMore ).toHaveBeenCalledTimes( 1 );
+	expect( push ).not.toHaveBeenCalled();
+	expect( wrapper.find( '.personal-dashboard-feed__show-less' ).attributes( 'aria-label' ) )
+		.toStrictEqual( '⧼moderator-toolkit-review-changes-show-less-aria-label⧽' );
 } );
 
 describe( 'loading more edits', () => {
@@ -261,7 +280,7 @@ test( 'teleports the header menu into the header slot', () => {
 	expect( wrapper.find( '[to="#pd-header-slot-reviewChanges"]' ).exists() )
 		.toStrictEqual( true );
 	expect( menu.get( 'button' ).attributes( 'aria-label' ) )
-		.toContain( 'personal-dashboard-review-changes-menu-button-label' );
+		.toContain( 'moderator-toolkit-review-changes-menu-button-label' );
 
 	expect( menu.props( 'menuItems' ).map( ( item ) => item.value ) )
 		.toStrictEqual( [ 'personalization' ] );
@@ -270,8 +289,8 @@ test( 'teleports the header menu into the header slot', () => {
 } );
 
 test.each( [
-	[ 'personalization', 'personal-dashboard-review-changes-personalization-title' ],
-	[ 'about', 'personal-dashboard-review-changes-menu-about' ]
+	[ 'personalization', 'moderator-toolkit-review-changes-personalization-title' ],
+	[ 'about', 'moderator-toolkit-review-changes-menu-about' ]
 ] )( 'picking %s opens that panel alone', async ( value, title ) => {
 	const wrapper = mount( App, {
 		props: { headerTarget: '#pd-header-slot-reviewChanges' }

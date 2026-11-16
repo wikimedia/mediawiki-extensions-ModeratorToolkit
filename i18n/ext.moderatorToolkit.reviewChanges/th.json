@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Samwalton9 (WMF)"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "ตรวจสอบการเปลี่ยนแปลง",
+	"moderator-toolkit-review-changes-subheader-info": "ช่วยรักษาความน่าเชื่อถือของวิกิพีเดีย",
+	"moderator-toolkit-review-changes-footer-preamble": "ดูการแก้ไขเพิ่มเติมได้ในหน้า [{{fullurl:Special:RecentChanges|revertrisklanguageagnostic=all}} การเปลี่ยนแปลงล่าสุด]",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "ไม่มีสรุปการแก้ไข"
+}

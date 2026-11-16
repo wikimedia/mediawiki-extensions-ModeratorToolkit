@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Samwalton9 (WMF)"
+		]
+	},
+	"moderator-toolkit-link-title": "แดชบอร์ด",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1|สวัสดี}}, {{bidi:$1}}!"
+}

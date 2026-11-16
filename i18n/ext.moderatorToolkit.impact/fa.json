@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jeeputer"
+		]
+	},
+	"moderator-toolkit-impact-title": "اثرگذاری شما",
+	"moderator-toolkit-impact-thanks-sent": "تشکرهای ارسال‌شده",
+	"moderator-toolkit-impact-edits-reviewed": "ویرایش‌های بازبینی‌شده",
+	"moderator-toolkit-impact-edits-reviewed-description": "شمار ویرایش‌هایی که برگردانده‌اید و تشکرهایی که ارسال کرده‌اید.",
+	"moderator-toolkit-impact-info-button": "برچسبی برای دکمهٔ اطلاعات، که ردهٔ «ویرایش‌های بررسی‌شده» را توضیح می‌دهد."
+}

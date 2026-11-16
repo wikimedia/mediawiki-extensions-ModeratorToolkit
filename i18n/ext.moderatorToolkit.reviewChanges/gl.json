@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "Revisar os cambios",
+	"moderator-toolkit-review-changes-subheader-info": "Estas edicións fixéronas outros usuarios. Mantente ao día e axuda a manter a calidade da Wikipedia revisándoas.",
+	"moderator-toolkit-review-changes-footer-preamble": "Ver máis edicións na páxina dos [{{fullurl:Special:RecentChanges|revertrisklanguageagnostic=all}} cambios recentes]",
+	"moderator-toolkit-review-changes-list-card-aria-label": "Abrir a vista de diferenzas de «$1»",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "Sen resumo de edición",
+	"moderator-toolkit-review-changes-empty": "Non se atopou ningún cambio",
+	"moderator-toolkit-review-changes-major-changes-label": "Cambios importantes",
+	"moderator-toolkit-review-changes-high-revert-risk-label": "Alto risco de reversión",
+	"moderator-toolkit-review-changes-menu-button-label": "Máis opcións para a revisión de cambios",
+	"moderator-toolkit-review-changes-menu-personalization": "Personalización",
+	"moderator-toolkit-review-changes-menu-about": "Acerca da revisión de cambios",
+	"moderator-toolkit-review-changes-personalization-title": "Personalizar a revisión de cambios",
+	"moderator-toolkit-review-changes-personalization-description": "Suxire cambios relevantes en función da túa actividade de edición. [https://www.mediawiki.org/wiki/Home/Recommendations#Review_Changes Máis información].",
+	"moderator-toolkit-review-changes-show-more-aria-label": "Mostrar máis cambios para revisar",
+	"moderator-toolkit-review-changes-show-less-aria-label": "Mostrar menos cambios para revisar"
+}

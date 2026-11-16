@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eihel",
+			"Escargot bleu",
+			"Wladek92"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "Vérifier les modifications",
+	"moderator-toolkit-review-changes-subheader-info": "Ces modifications ont été faites par d'autres utilisateurs. Restez à jour et aidez à préserver la qualité de Wikipédia en effectuant des relectures.",
+	"moderator-toolkit-review-changes-footer-preamble": "Voir plus de modifications dans la [{{fullurl:Special:RecentChanges\n|revertrisklanguageagnostic=all}} page des modifications récentes]",
+	"moderator-toolkit-review-changes-list-card-aria-label": "Ouvrir la vue différentielle pour $1",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "Aucun résumé de modifications"
+}

@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"আফতাবুজ্জামান"
+		]
+	},
+	"moderator-toolkit-link-title": "ড্যাশবোর্ড",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1|স্বাগতম}}, {{bidi:$1}}!",
+	"tooltip-pt-personaldashboard": "{{GENDER:|আপনার}} ব্যক্তিগত ড্যাশবোর্ড"
+}

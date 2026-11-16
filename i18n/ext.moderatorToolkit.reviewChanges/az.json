@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nemoralis",
+			"Əkrəm"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "Redaktələri yoxla",
+	"moderator-toolkit-review-changes-subheader-info": "Bu redaktələr digər istifadəçilər tərəfindən edilib. Yeniliklərdən xəbərdar olun və onları nəzərdən keçirərək Vikipediyanın keyfiyyətini qorumağa kömək edin.",
+	"moderator-toolkit-review-changes-footer-preamble": "[{{fullurl:Special:RecentChanges|revertrisklanguageagnostic=all}} Son dəyişikliklər səhifəsində] daha çox redaktəyə baxın.",
+	"moderator-toolkit-review-changes-list-card-aria-label": "$1 üçün fərq görünüşünü aç",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "Redaktə xülasəsi yoxdur"
+}

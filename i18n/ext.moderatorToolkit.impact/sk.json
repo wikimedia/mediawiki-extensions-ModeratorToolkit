@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"moderator-toolkit-impact-title": "Váš prínos",
+	"moderator-toolkit-impact-thanks-sent": "Odoslané poďakovania",
+	"moderator-toolkit-impact-edits-reviewed": "Posúdené úpravy",
+	"moderator-toolkit-impact-edits-reviewed-description": "Počíta úpravy, ktoré ste za posledných 30 dní vrátili, a všetky poďakovania, ktoré ste odoslali.",
+	"moderator-toolkit-impact-info-button": "Informácie"
+}

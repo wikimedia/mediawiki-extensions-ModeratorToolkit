@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hide on Rosé",
+			"Veritas Sapientiae"
+		]
+	},
+	"moderator-toolkit-active-discussions-title": "Các cuộc thảo luận đang diễn ra",
+	"moderator-toolkit-active-discussions-latest-comment": "Bình luận mới nhất:",
+	"moderator-toolkit-active-discussions-fetch-error": "Không tìm thấy cuộc thảo luận nào đang diễn ra."
+}

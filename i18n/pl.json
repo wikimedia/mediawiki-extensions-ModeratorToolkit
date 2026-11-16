@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"PanWor"
+			"PanWor",
+			"Woytecr"
 		]
 	},
-	"moderator-toolkit-desc": "Eksperymentalny panel dla moderatorów"
+	"moderator-toolkit-desc": "Eksperymentalny panel dla moderatorów",
+	"moderator-toolkit-link-title": "Centrum dowodzenia",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1|Witaj}}, {{bidi:$1}}!",
+	"tooltip-pt-personaldashboard": "{{GENDER:|Twój}} osobisty pulpit"
 }

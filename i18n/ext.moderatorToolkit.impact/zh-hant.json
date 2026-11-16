@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly",
+			"LowensteinYang"
+		]
+	},
+	"moderator-toolkit-impact-title": "您的影響",
+	"moderator-toolkit-impact-thanks-sent": "已發送的感謝",
+	"moderator-toolkit-impact-edits-reviewed": "已審核的編輯",
+	"moderator-toolkit-impact-edits-reviewed-description": "統計您在過去30天內回退的編輯次數、以及您所發出的所有感謝訊息。",
+	"moderator-toolkit-impact-info-button": "資訊"
+}

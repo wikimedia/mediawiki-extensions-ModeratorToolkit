@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dillon Hardy"
+		]
+	},
+	"moderator-toolkit-impact-title": "Your impact",
+	"moderator-toolkit-impact-thanks-sent": "Thanks sent",
+	"moderator-toolkit-impact-edits-reviewed": "Edits reviewed",
+	"moderator-toolkit-impact-edits-reviewed-description": "Counts the edits you have reverted in the last 30 days and all thanks you have sent.",
+	"moderator-toolkit-impact-info-button": "Info"
+}

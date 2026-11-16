@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Siebrand"
+			"Siebrand",
+			"HanV"
 		]
 	},
-	"moderator-toolkit-desc": "Een experimenteel dashboard voor beheerders"
+	"moderator-toolkit-desc": "Een experimenteel dashboard voor beheerders",
+	"moderator-toolkit-link-title": "Dashboard",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1|Hallo}}, {{bidi:$1}}!",
+	"tooltip-pt-personaldashboard": "{{GENDER:|Uw}} persoonlijke dashboard"
 }

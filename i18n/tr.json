@@ -2,8 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Efygz",
-			"Hedda"
+			"Hedda",
+			"Samwalton9 (WMF)"
 		]
 	},
-	"moderator-toolkit-desc": "Moderatörler için deneysel kontrol paneli"
+	"moderator-toolkit-desc": "Moderatörler için deneysel kontrol paneli",
+	"moderator-toolkit-link-title": "Kontrol Panelim",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1|Merhaba}}, {{bidi:$1}}!",
+	"tooltip-pt-personaldashboard": "{{GENDER:|Size ait}} kontrol paneli"
 }

@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mormegil"
+		]
+	},
+	"moderator-toolkit-active-discussions-title": "Aktivní diskuse",
+	"moderator-toolkit-active-discussions-latest-comment": "Nejnovější komentář:",
+	"moderator-toolkit-active-discussions-fetch-error": "Nenalezeny žádné aktivní diskuse",
+	"moderator-toolkit-active-discussions-in-topic": "$1 na $2",
+	"moderator-toolkit-active-discussions-show-more-aria-label": "Zobrazit více aktivních diskusí",
+	"moderator-toolkit-active-discussions-show-less-aria-label": "Zobrazit méně aktivních diskusí"
+}

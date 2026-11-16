@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kookoriko",
+			"Suecarmol"
+		]
+	},
+	"moderator-toolkit-impact-title": "Tu impacto",
+	"moderator-toolkit-impact-thanks-sent": "Agradecimientos enviados",
+	"moderator-toolkit-impact-edits-reviewed": "Ediciones revisadas",
+	"moderator-toolkit-impact-edits-reviewed-description": "Cuenta las ediciones que has revertido en los últimos 30 días y todos los agradecimientos que has enviado.",
+	"moderator-toolkit-impact-info-button": "Etiqueta para el botón de información, que explica la categoría “Ediciones revisadas”."
+}

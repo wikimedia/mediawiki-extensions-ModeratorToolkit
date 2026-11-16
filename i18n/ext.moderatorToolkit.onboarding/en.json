@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dillon Hardy"
+		]
+	},
+	"moderator-toolkit-onboarding-title": "Your dashboard",
+	"moderator-toolkit-onboarding-get-started-button": "Get started",
+	"moderator-toolkit-onboarding-step-1-body": "Because of your editing experience, we encourage you to help review edits from other contributors. This central hub helps you navigate Wikipedia by showing changes to review alongside policies and resources that can guide your decisions.",
+	"moderator-toolkit-onboarding-step-1-alt": "Illustration of a page with three separate simplified dashboard panels.",
+	"moderator-toolkit-onboarding-step-2-title": "Features",
+	"moderator-toolkit-onboarding-step-3-title": "Share your feedback",
+	"moderator-toolkit-onboarding-step-3-body": "Over the coming months we plan to personalize the features based on your editing activity. Please let us know what you think in the meantime. To share your feedback, we've provided a survey link at the top of the page.",
+	"moderator-toolkit-onboarding-step-3-alt": "Illustration of a simplified dashboard where the top of the page has a darker blue section emphasizing the feedback link."
+}

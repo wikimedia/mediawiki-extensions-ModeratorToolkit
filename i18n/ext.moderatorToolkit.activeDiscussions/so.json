@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"AhmedG612"
+		]
+	},
+	"moderator-toolkit-active-discussions-title": "Doodaha firfircoon",
+	"moderator-toolkit-active-discussions-latest-comment": "Faalladii ugu dambeysay:",
+	"moderator-toolkit-active-discussions-fetch-error": "Lama helin dooddo firfircoon",
+	"moderator-toolkit-active-discussions-in-topic": "$1, ee $2",
+	"moderator-toolkit-active-discussions-show-more-aria-label": "Muuji doodaha firfircoon ee dheeraadka ah",
+	"moderator-toolkit-active-discussions-show-less-aria-label": "Muuji doodaha firfircoon ee yar"
+}

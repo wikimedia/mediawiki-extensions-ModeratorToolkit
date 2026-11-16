@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	},
+	"moderator-toolkit-active-discussions-title": "Openstaande onderwerpen",
+	"moderator-toolkit-active-discussions-latest-comment": "Nieuwste reactie:",
+	"moderator-toolkit-active-discussions-fetch-error": "Geen actieve discussies gevonden",
+	"moderator-toolkit-active-discussions-in-topic": "$1 in $2"
+}

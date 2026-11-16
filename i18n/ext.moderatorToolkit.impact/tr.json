@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Samwalton9 (WMF)"
+		]
+	},
+	"moderator-toolkit-impact-title": "Etkiniz",
+	"moderator-toolkit-impact-thanks-sent": "Teşekkür ettikleriniz",
+	"moderator-toolkit-impact-edits-reviewed": "İnceledikleriniz",
+	"moderator-toolkit-impact-edits-reviewed-description": "Geri aldığınız düzenlemelerin ve gönderdiğiniz teşekkürlerin sayısı.",
+	"moderator-toolkit-impact-info-button": "Bilgi"
+}

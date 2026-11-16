@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hakimi97"
+		]
+	},
+	"moderator-toolkit-link-title": "Papan pemuka",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1|Apa khabar}}, {{bidi:$1}}!",
+	"tooltip-pt-personaldashboard": "Papan pemuka peribadi {{GENDER:|anda}}"
+}

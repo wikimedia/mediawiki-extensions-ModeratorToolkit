@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"moderator-toolkit-active-discussions-title": "Aktive Diskussionen",
+	"moderator-toolkit-active-discussions-latest-comment": "Letzter Kommentar:",
+	"moderator-toolkit-active-discussions-fetch-error": "Es wurden keine aktiven Diskussionen gefunden.",
+	"moderator-toolkit-active-discussions-in-topic": "$1, in $2",
+	"moderator-toolkit-active-discussions-show-more-aria-label": "Mehr aktive Diskussionen anzeigen",
+	"moderator-toolkit-active-discussions-show-less-aria-label": "Weniger aktive Diskussionen anzeigen"
+}

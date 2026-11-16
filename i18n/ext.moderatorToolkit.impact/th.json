@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Samwalton9 (WMF)"
+		]
+	},
+	"moderator-toolkit-impact-title": "ผลกระทบของคุณ",
+	"moderator-toolkit-impact-thanks-sent": "ขอบคุณที่ส่งมา",
+	"moderator-toolkit-impact-edits-reviewed": "การแก้ไขได้รับการตรวจสอบแล้ว",
+	"moderator-toolkit-impact-edits-reviewed-description": "นับจำนวนการแก้ไขที่คุณได้ย้อนกลับ และจำนวนข้อความขอบคุณที่คุณได้ส่งไป",
+	"moderator-toolkit-impact-info-button": "ข้อมูล"
+}

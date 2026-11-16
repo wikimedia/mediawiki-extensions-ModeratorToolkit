@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "د بدلونونو بياکتنه",
+	"moderator-toolkit-review-changes-subheader-info": "دا سمونونه د نورو کارنانو له خوا شوې دي. له موږ سره پاتې شئ او د بياکتنې له لارې د ويکي‌پېډيا څرنگوالي ښه ساتلو کې مرسته وکړئ.",
+	"moderator-toolkit-review-changes-footer-preamble": "نور سمونونه په [{{fullurl:Special:RecentChanges|revertrisklanguageagnostic=all}} ورستيو بدلونونو مخ] کې وگورئ",
+	"moderator-toolkit-review-changes-list-card-aria-label": "د $1 توپير کتنه پرانېستل",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "د سمون لنډیز نشته"
+}

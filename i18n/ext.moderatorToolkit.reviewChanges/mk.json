@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "Прегледај промени",
+	"moderator-toolkit-review-changes-subheader-info": "Овие уредувања беа направени од други корисници. Бидете во тек и помогнете во одржувањето на квалитетот на Википедија со тоа што ќе ги прегледате.",
+	"moderator-toolkit-review-changes-footer-preamble": "Погледајте повеќе уредувања на страницата [{{fullurl:Special:RecentChanges|revertrisklanguageagnostic=all}} скорешни промени]",
+	"moderator-toolkit-review-changes-list-card-aria-label": "Отворете го прегледот на разлики за $1",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "Нема опис на уредувањето",
+	"moderator-toolkit-review-changes-empty": "Не најдов промени",
+	"moderator-toolkit-review-changes-major-changes-label": "Крупни промени",
+	"moderator-toolkit-review-changes-high-revert-risk-label": "Висок ризик од враќање",
+	"moderator-toolkit-review-changes-menu-button-label": "Повеќе можности за Враќање на промени",
+	"moderator-toolkit-review-changes-menu-personalization": "Персонализација",
+	"moderator-toolkit-review-changes-menu-about": "За Прегледот на промените",
+	"moderator-toolkit-review-changes-personalization-title": "Персонализација на Прегледот на промените",
+	"moderator-toolkit-review-changes-personalization-description": "Предлага релевантни промени според вашата уредувачка активност. [https://www.mediawiki.org/wiki/Home/Recommendations#Review_Changes Дознајте повеќе]",
+	"moderator-toolkit-review-changes-show-more-aria-label": "Прикажи повеќе промени за прегледување",
+	"moderator-toolkit-review-changes-show-less-aria-label": "Прикажи помалку промени за прегледување"
+}

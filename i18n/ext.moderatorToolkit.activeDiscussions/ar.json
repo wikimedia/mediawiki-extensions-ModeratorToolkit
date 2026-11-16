@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Meno25"
+		]
+	},
+	"moderator-toolkit-active-discussions-title": "مناقشات فعّالة",
+	"moderator-toolkit-active-discussions-latest-comment": "آخر تعليق:",
+	"moderator-toolkit-active-discussions-fetch-error": "لم يتم العثور على مناقشات نشطة",
+	"moderator-toolkit-active-discussions-in-topic": "$1 ، في $2",
+	"moderator-toolkit-active-discussions-show-more-aria-label": "عرض المزيد من المناقشات النشطة",
+	"moderator-toolkit-active-discussions-show-less-aria-label": "عرض عدد أقل من المناقشات النشطة"
+}

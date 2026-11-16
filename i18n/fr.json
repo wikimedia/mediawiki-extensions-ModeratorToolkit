@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Escargot bleu",
+			"NClara"
+		]
+	},
+	"moderator-toolkit-link-title": "Tableau de bord",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1|Bonjour}}, {{bidi:$1}} !",
+	"tooltip-pt-personaldashboard": "{{GENDER:|Votre}} tableau de bord personnel"
+}

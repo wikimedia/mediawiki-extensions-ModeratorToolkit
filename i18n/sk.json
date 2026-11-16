@@ -4,5 +4,8 @@
 			"Wizzard"
 		]
 	},
-	"moderator-toolkit-desc": "Experimentálny prehľad pre moderátorov"
+	"moderator-toolkit-desc": "Experimentálny prehľad pre moderátorov",
+	"moderator-toolkit-link-title": "Nástenka",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1|Dobrý deň}}, {{bidi:$1}}!",
+	"tooltip-pt-personaldashboard": "{{GENDER:|Vaša}} osobná nástenka"
 }

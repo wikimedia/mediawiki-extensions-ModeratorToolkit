@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Samoasambia",
+			"Wikipeedikko"
+		]
+	},
+	"moderator-toolkit-active-discussions-title": "Aktiiviset keskustelut",
+	"moderator-toolkit-active-discussions-latest-comment": "Viimeisin kommentti:",
+	"moderator-toolkit-active-discussions-fetch-error": "Aktiivisia keskusteluja ei löytynyt",
+	"moderator-toolkit-active-discussions-in-topic": "$1, osiossa $2",
+	"moderator-toolkit-active-discussions-show-more-aria-label": "Näytä enemmän aktiivisia keskusteluja",
+	"moderator-toolkit-active-discussions-show-less-aria-label": "Näytä vähemmän aktiivisia keskusteluja"
+}

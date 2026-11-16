@@ -13,9 +13,9 @@ module.exports = defineComponent( {
 	setup() {
 		return {
 			// The menu item names the panel it opens, so both read one message.
-			title: mw.msg( 'personal-dashboard-review-changes-menu-about' ),
+			title: mw.msg( 'moderator-toolkit-review-changes-menu-about' ),
 			// The module's description. The card itself has none.
-			body: mw.msg( 'personal-dashboard-risky-article-edits-subheader-info' )
+			body: mw.msg( 'moderator-toolkit-review-changes-subheader-info' )
 		};
 	}
 } );

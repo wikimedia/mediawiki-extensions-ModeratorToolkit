@@ -8,7 +8,7 @@
 			{{ label }}
 			<template #description>
 				<!-- eslint-disable-next-line max-len -->
-				<span v-i18n-html:personal-dashboard-review-changes-personalization-description></span>
+				<span v-i18n-html:moderator-toolkit-review-changes-personalization-description></span>
 			</template>
 		</cdx-toggle-switch>
 	</module-panel>
@@ -34,8 +34,8 @@ module.exports = defineComponent( {
 		return {
 			personalized: ref( isPersonalized() ),
 			isSaving: ref( false ),
-			title: mw.msg( 'personal-dashboard-review-changes-personalization-title' ),
-			label: mw.msg( 'personal-dashboard-review-changes-menu-personalization' )
+			title: mw.msg( 'moderator-toolkit-review-changes-personalization-title' ),
+			label: mw.msg( 'moderator-toolkit-review-changes-menu-personalization' )
 		};
 	},
 	methods: {

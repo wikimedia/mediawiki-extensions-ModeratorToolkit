@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "檢閱更改",
+	"moderator-toolkit-review-changes-footer-preamble": "在[{{fullurl:Special:RecentChanges|revertrisklanguageagnostic=all}} 最近變更頁面]查看更多編輯內容",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "無編輯摘要"
+}

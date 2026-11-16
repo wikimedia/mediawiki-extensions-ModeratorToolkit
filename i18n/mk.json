@@ -4,5 +4,8 @@
 			"Bjankuloski06"
 		]
 	},
-	"moderator-toolkit-desc": "Експериментална управувачница за модаратори"
+	"moderator-toolkit-desc": "Експериментална управувачница за модаратори",
+	"moderator-toolkit-link-title": "Управувачница",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1|Здраво}}, {{bidi:$1}}!",
+	"tooltip-pt-personaldashboard": "{{GENDER:|Ваша}} лична управувачница"
 }

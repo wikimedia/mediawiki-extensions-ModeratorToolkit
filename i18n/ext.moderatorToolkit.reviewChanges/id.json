@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Samwalton9 (WMF)",
+			"Veracious"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "Periksa perubahan suntingan",
+	"moderator-toolkit-review-changes-subheader-info": "Bantulah agar Wikipedia tetap tepercaya.",
+	"moderator-toolkit-review-changes-footer-preamble": "Lihat suntingan lainnya di [{{fullurl:Special:RecentChanges|revertrisklanguageagnostic=all}} halaman Perubahan Terbaru]",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "Tidak ada ringkasan suntingan",
+	"moderator-toolkit-review-changes-menu-personalization": "Personalisasi"
+}

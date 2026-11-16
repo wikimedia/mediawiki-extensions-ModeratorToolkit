@@ -1,8 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"GuoPC"
+			"GuoPC",
+			"Ouclie",
+			"SaoMikoto",
+			"Saoutax",
+			"沈澄心"
 		]
 	},
-	"moderator-toolkit-desc": "一个面向版主的实验性面板"
+	"moderator-toolkit-desc": "一个面向版主的实验性面板",
+	"moderator-toolkit-link-title": "面板",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1|您好}}，{{bidi:$1}}！",
+	"tooltip-pt-personaldashboard": "{{GENDER:|您的}}个人面板"
 }

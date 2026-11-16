@@ -2,5 +2,8 @@
 	"@metadata": {
 		"authors": []
 	},
-	"moderator-toolkit-desc": "Ein experimentelles Dashboard für Moderatoren"
+	"moderator-toolkit-desc": "Ein experimentelles Dashboard für Moderatoren",
+	"moderator-toolkit-link-title": "Dashboard",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1|Hallo}}, {{bidi:$1}}!",
+	"tooltip-pt-personaldashboard": "{{GENDER:|Dein}} persönliches Dashboard"
 }

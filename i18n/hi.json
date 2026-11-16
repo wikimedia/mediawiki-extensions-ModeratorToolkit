@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Saurmandal"
+		]
+	},
+	"moderator-toolkit-link-title": "डैशबोर्ड",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1|नमस्ते}}, {{bidi:$1}} जी!",
+	"tooltip-pt-personaldashboard": "{{GENDER:|आपका}} व्यक्तिगत डैशबोर्ड"
+}

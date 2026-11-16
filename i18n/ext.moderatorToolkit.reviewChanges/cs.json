@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mormegil"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "Zkontrolovat změny",
+	"moderator-toolkit-review-changes-subheader-info": "Tyto editace provedli jiní uživatelé. Zůstaňte v obraze a pomozte udržovat kvalitu Wikipedie tím, že je zkontrolujete.",
+	"moderator-toolkit-review-changes-footer-preamble": "Více editací si můžete prohlédnout na [{{fullurl:Special:RecentChanges|revertrisklanguageagnostic=all}} stránce posledních změn]",
+	"moderator-toolkit-review-changes-list-card-aria-label": "Otevřít zobrazení rozdílů pro $1",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "Bez shrnutí editace",
+	"moderator-toolkit-review-changes-empty": "Nenalezeny žádné změny",
+	"moderator-toolkit-review-changes-major-changes-label": "Velké změny",
+	"moderator-toolkit-review-changes-high-revert-risk-label": "Vysoké riziko revertu",
+	"moderator-toolkit-review-changes-menu-button-label": "Další možnosti pro Kontrolu změn",
+	"moderator-toolkit-review-changes-menu-personalization": "Přizpůsobení",
+	"moderator-toolkit-review-changes-menu-about": "O Kontrole změn",
+	"moderator-toolkit-review-changes-personalization-title": "Přizpůsobení Kontroly změn",
+	"moderator-toolkit-review-changes-personalization-description": "Navrhovat relevantní změny na základě vaší editační aktivity. [https://www.mediawiki.org/wiki/Home/Recommendations#Review_Changes Více informací]",
+	"moderator-toolkit-review-changes-show-more-aria-label": "Zobrazit více změn ke kontrole",
+	"moderator-toolkit-review-changes-show-less-aria-label": "Zobrazit méně změn ke kontrole"
+}

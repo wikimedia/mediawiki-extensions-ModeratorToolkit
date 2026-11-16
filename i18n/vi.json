@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hide on Rosé",
+			"Veritas Sapientiae"
+		]
+	},
+	"moderator-toolkit-link-title": "Bảng điều khiển",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1|Xin chào}}, {{bidi:$1}}!",
+	"tooltip-pt-personaldashboard": "Bảng điều khiển cá nhân của bạn"
+}

@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"moderator-toolkit-active-discussions-title": "Conversas activas",
+	"moderator-toolkit-active-discussions-latest-comment": "Último comentario:",
+	"moderator-toolkit-active-discussions-fetch-error": "Non se atopou ningunha conversa activa",
+	"moderator-toolkit-active-discussions-in-topic": "«$1» en «$2»",
+	"moderator-toolkit-active-discussions-show-more-aria-label": "Mostrar máis conversas activas",
+	"moderator-toolkit-active-discussions-show-less-aria-label": "Mostrar menos conversas activas"
+}

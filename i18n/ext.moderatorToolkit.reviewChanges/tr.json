@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Anerka",
+			"Hedda",
+			"Rapsar",
+			"Samwalton9 (WMF)"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "Değişiklikleri gözden geçir",
+	"moderator-toolkit-review-changes-subheader-info": "Vikipedi’nin güvenilirliğine katkıda bulunun.",
+	"moderator-toolkit-review-changes-footer-preamble": "[{{fullurl:Special:RecentChanges|revertrisklanguageagnostic=all}} Son değişiklikler sayfasında] daha fazla değişiklik görüntüle.",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "Değişiklik özeti yok"
+}

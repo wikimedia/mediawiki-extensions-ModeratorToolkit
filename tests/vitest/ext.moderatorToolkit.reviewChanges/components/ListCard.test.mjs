@@ -15,10 +15,11 @@ function getOtherLinks( wrapper ) {
 	];
 }
 
-// Safely ignore error: Cannot find package 'ext.checkUser.userInfoCard'
-mw.loader.using = () => {};
+// Safely ignore error: Cannot find package 'ext.checkUser.userInfoCard'.
+// The promise never settles, so the card instrumentation waits forever.
+mw.loader.using = () => new Promise( () => {} );
 
-test( 'mount component', () => {
+test( 'gives the diff link an accessible name and shows the edit', () => {
 	const date = new Date( 2026, 1, 1, 3, 0 );
 
 	const wrapper = mount( ListCard, {
@@ -37,7 +38,11 @@ test( 'mount component', () => {
 		}
 	} );
 
-	expect( wrapper.element ).toMatchSnapshot();
+	expect( wrapper.get( '.personal-dashboard-feed__card__link' ).attributes( 'aria-label' ) )
+		.toStrictEqual( '⧼moderator-toolkit-review-changes-list-card-aria-label⧽' );
+	expect( wrapper.text() ).toContain( 'TestUser' );
+	expect( wrapper.text() ).toContain( 'TestComment' );
+	expect( wrapper.text() ).toContain( 'a description' );
 } );
 
 test( 'renders appropriate message when edit is made today', () => {
@@ -232,7 +237,7 @@ test( 'shows the major changes chip when the size delta exceeds 1000 bytes', () 
 
 	const chip = wrapper.find( '.cdx-info-chip' );
 	expect( chip.exists() ).toStrictEqual( true );
-	expect( chip.text() ).toStrictEqual( '⧼personal-dashboard-review-changes-major-changes-label⧽' );
+	expect( chip.text() ).toStrictEqual( '⧼moderator-toolkit-review-changes-major-changes-label⧽' );
 	expect( chip.find( '.cdx-icon' ).exists() ).toStrictEqual( true );
 } );
 
@@ -394,6 +399,13 @@ function mountCard( props ) {
 	} );
 }
 
+test( 'names its feed source on the card, for the click-through instrumentation', () => {
+	const wrapper = mountCard( { feedorigin: 'watchlist' } );
+
+	expect( wrapper.find( '.moderator-toolkit-review-changes__card' ).attributes( 'data-feedorigin' ) )
+		.toStrictEqual( 'watchlist' );
+} );
+
 const THRESHOLD = { model: 'revertrisklanguageagnostic', class: 'true', min: 0.95 };
 
 test( 'flags an edit whose score reaches the wiki threshold', () => {
@@ -404,7 +416,7 @@ test( 'flags an edit whose score reaches the wiki threshold', () => {
 	} );
 
 	expect( wrapper.find( '.cdx-info-chip' ).text() )
-		.toContain( 'personal-dashboard-review-changes-high-revert-risk-label' );
+		.toContain( 'moderator-toolkit-review-changes-high-revert-risk-label' );
 	expect( wrapper.find( '.cdx-info-chip' ).classes() )
 		.toContain( 'cdx-info-chip--warning' );
 } );
@@ -417,7 +429,7 @@ test( 'flags an edit that sits exactly on the threshold', () => {
 	} );
 
 	expect( wrapper.find( '.cdx-info-chip' ).text() )
-		.toContain( 'personal-dashboard-review-changes-high-revert-risk-label' );
+		.toContain( 'moderator-toolkit-review-changes-high-revert-risk-label' );
 } );
 
 test( 'leaves an edit below the threshold unflagged', () => {
@@ -467,5 +479,5 @@ test( 'shows both flags on an edit that earns both', () => {
 	// Risk first: it is the reason to look at the edit at all.
 	expect( chips[ 0 ].classes() ).toContain( 'cdx-info-chip--warning' );
 	expect( chips[ 1 ].text() )
-		.toContain( 'personal-dashboard-review-changes-major-changes-label' );
+		.toContain( 'moderator-toolkit-review-changes-major-changes-label' );
 } );

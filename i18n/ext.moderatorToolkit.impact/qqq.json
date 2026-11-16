@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dillon Hardy",
+			"Woytecr"
+		]
+	},
+	"moderator-toolkit-impact-title": "Title for the “Your impact” module.",
+	"moderator-toolkit-impact-thanks-sent": "Title for the “Thanks sent” statistic.",
+	"moderator-toolkit-impact-edits-reviewed": "Title for the “Edits reviewed” statistic.",
+	"moderator-toolkit-impact-edits-reviewed-description": "Description for the “Edits reviewed” statistic.",
+	"moderator-toolkit-impact-info-button": "Label (visible only for screen readers) for the info button, which explains the “Edits reviewed” category."
+}

@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Katherine Graessle",
+			"Mormegil"
+		]
+	},
+	"moderator-toolkit-review-changes-header": "Text header for the recent activity module",
+	"moderator-toolkit-review-changes-subheader-info": "Updated subheader text for the recent activity module.",
+	"moderator-toolkit-review-changes-footer-preamble": "Text for the footer of the recent activity module",
+	"moderator-toolkit-review-changes-list-card-aria-label": "aria-label for the invisible link covering the list card that opens the diff view.\n\nParameters:\n* $1 - Article title",
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "Text for the Recent activity module list card when there is no edit summary",
+	"moderator-toolkit-review-changes-empty": "Shown in the Review changes module in place of the list when there are no changes to review.",
+	"moderator-toolkit-review-changes-major-changes-label": "Label for the major changes indicator",
+	"moderator-toolkit-review-changes-high-revert-risk-label": "Label for the chip shown on an edit whose machine-learning revert-risk score reaches the wiki’s configured threshold.",
+	"moderator-toolkit-review-changes-menu-button-label": "aria-label for the icon-only overflow menu button in the Review changes ({{msg-mw|moderator-toolkit-review-changes-header}}) module header.",
+	"moderator-toolkit-review-changes-menu-personalization": "Item in the Review changes header menu, and the label above {{msg-mw|moderator-toolkit-review-changes-personalization-description}} in the panel it opens.",
+	"moderator-toolkit-review-changes-menu-about": "Item in the Review changes ({{msg-mw|moderator-toolkit-review-changes-header}}) header menu, and the title of the panel it opens. The panel body is {{msg-mw|moderator-toolkit-review-changes-subheader-info}}.",
+	"moderator-toolkit-review-changes-personalization-title": "Title of the panel opened by {{msg-mw|moderator-toolkit-review-changes-menu-personalization}}.",
+	"moderator-toolkit-review-changes-personalization-description": "Body of the personalization panel. Links to the help page about the recommender system.",
+	"moderator-toolkit-review-changes-show-more-aria-label": "Accessible label for the \"Show more\" button at the bottom of the Review changes module. It names the module, so screen reader users can tell it apart from the same button in other modules. It must start with the translation of {{msg-mw|personal-dashboard-feed-load-more}}.",
+	"moderator-toolkit-review-changes-show-less-aria-label": "Accessible label for the icon-only button at the bottom of the Review changes module that hides the extra changes again after \"Show more\" was used."
+}

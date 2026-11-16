@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Samwalton9 (WMF)"
+		]
+	},
+	"moderator-toolkit-link-title": "Dasbor",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1|Halo}}, {{bidi:$1}}!",
+	"tooltip-pt-personaldashboard": "Dasbor pribadi {{GENDER:|Anda}}"
+}

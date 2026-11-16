@@ -1,8 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"MusikAnimal"
+			"MusikAnimal",
+			"Dillon Hardy",
+			"Jsn.sherman"
 		]
 	},
-	"moderator-toolkit-desc": "An experimental dashboard for moderators"
+	"moderator-toolkit-desc": "An experimental dashboard for moderators",
+	"moderator-toolkit-link-title": "Dashboard",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1|Hello}}, {{bidi:$1}}!",
+	"tooltip-pt-personaldashboard": "{{GENDER:|Your}} personal dashboard"
 }

@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	},
+	"moderator-toolkit-impact-title": "Uw bijdrage",
+	"moderator-toolkit-impact-thanks-sent": "Bedankje verzonden",
+	"moderator-toolkit-impact-edits-reviewed": "Bewerkingen beoordeeld",
+	"moderator-toolkit-impact-edits-reviewed-description": "Dit telt de wijzigingen die u de afgelopen 30 dagen hebt teruggedraaid en alle bedankjes die u hebt gestuurd.",
+	"moderator-toolkit-impact-info-button": "Info"
+}

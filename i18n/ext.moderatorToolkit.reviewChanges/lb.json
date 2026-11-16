@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Volvox"
+		]
+	},
+	"moderator-toolkit-review-changes-list-card-no-comment-message": "Kee Resümmee vun der Ännerung",
+	"moderator-toolkit-review-changes-empty": "Keng Ännerunge fonnt",
+	"moderator-toolkit-review-changes-major-changes-label": "Gréisser Ännerungen",
+	"moderator-toolkit-review-changes-menu-personalization": "Personaliséierung",
+	"moderator-toolkit-review-changes-show-more-aria-label": "Méi Ännerunge fir nozekucke weisen",
+	"moderator-toolkit-review-changes-show-less-aria-label": "Manner Ännerunge fir nozekucke weisen"
+}

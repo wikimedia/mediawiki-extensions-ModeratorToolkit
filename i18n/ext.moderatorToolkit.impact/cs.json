@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mormegil"
+		]
+	},
+	"moderator-toolkit-impact-title": "Váš dopad",
+	"moderator-toolkit-impact-thanks-sent": "Odeslaná poděkování",
+	"moderator-toolkit-impact-edits-reviewed": "Zkontrolované editace",
+	"moderator-toolkit-impact-edits-reviewed-description": "Počítá editace, které jste během posledních třiceti dní {{GENDER:|revertoval|revertovala|revertovali}}, a všechna poděkování, která jste {{GENDER:|odeslal|odeslala|odeslali}}.",
+	"moderator-toolkit-impact-info-button": "Informace"
+}

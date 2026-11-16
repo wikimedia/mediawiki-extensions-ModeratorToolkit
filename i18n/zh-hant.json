@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly",
+			"LowensteinYang"
+		]
+	},
+	"moderator-toolkit-link-title": "面板",
+	"moderator-toolkit-specialpage-title": "{{GENDER:$1|您好}}，{{bidi:$1}}！",
+	"tooltip-pt-personaldashboard": "{{GENDER:|您的}}個人面板"
+}

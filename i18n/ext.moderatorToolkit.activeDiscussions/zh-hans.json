@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"GuoPC"
+		]
+	},
+	"moderator-toolkit-active-discussions-title": "活跃的讨论",
+	"moderator-toolkit-active-discussions-latest-comment": "最新留言：",
+	"moderator-toolkit-active-discussions-fetch-error": "未找到活跃的讨论",
+	"moderator-toolkit-active-discussions-in-topic": "$1，$2下",
+	"moderator-toolkit-active-discussions-show-more-aria-label": "显示更多活跃的讨论",
+	"moderator-toolkit-active-discussions-show-less-aria-label": "显示更少活跃的讨论"
+}

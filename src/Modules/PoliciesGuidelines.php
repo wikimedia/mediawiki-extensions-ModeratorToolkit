@@ -118,8 +118,7 @@ class PoliciesGuidelines extends BaseModule {
 			// * moderator-toolkit-policies-guidelines-verifiability-definition
 			// * moderator-toolkit-policies-guidelines-assume-good-faith-definition
 			->setDescription( $this->msg( "moderator-toolkit-policies-guidelines-$name-definition" )->text() )
-			->setContentHtml( $this->getStepsHtml( $name, $steps ) )
-			->build();
+			->setContent( $this->getStepsHtml( $name, $steps ) );
 	}
 
 	/**
@@ -189,8 +188,6 @@ class PoliciesGuidelines extends BaseModule {
 				)
 			);
 		}
-		return $this->getCodex()->htmlSnippet()
-			->setContent( $html )
-			->build();
+		return $this->getCodex()->htmlSnippet( $html );
 	}
 }
