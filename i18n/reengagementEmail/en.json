@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dillon Hardy"
+		]
+	},
+	"moderator-toolkit-reengagement-email-subject": "{{PLURAL:$1|$1 view|$1 views}} on articles {{GENDER:$2|you}} edited",
+	"moderator-toolkit-reengagement-email-total-views-label": "{{PLURAL:$1|view|views}} on articles {{GENDER:$2|you}} edited",
+	"moderator-toolkit-reengagement-email-intro": "$1, {{GENDER:$1|you’re}} one of $2+ editors improving Wikipedia this month.",
+	"moderator-toolkit-reengagement-email-cta-heading": "Every edit helps",
+	"moderator-toolkit-reengagement-email-cta-text": "Suggested edits finds articles that need {{GENDER:$1|you}}.",
+	"moderator-toolkit-reengagement-email-cta-button": "Make an edit",
+	"moderator-toolkit-reengagement-email-pages-heading": "Most viewed since {{GENDER:$1|your}} last edit",
+	"moderator-toolkit-reengagement-email-page-views": "{{PLURAL:$1|$1 view|$1 views}}",
+	"moderator-toolkit-reengagement-email-page-new-edits": "{{PLURAL:$1|$1 new edit|$1 new edits}}",
+	"moderator-toolkit-reengagement-email-page-new-edits-by": "$1 by {{PLURAL:$2|$2 contributor|$2 contributors}}",
+	"moderator-toolkit-reengagement-email-footer": "To control which emails we send {{GENDER:$2|you}}, check {{GENDER:$2|your}} $1.",
+	"moderator-toolkit-reengagement-email-footer-preferences": "preferences"
+}

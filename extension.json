@@ -22,12 +22,14 @@
 		}
 	},
 	"AutoloadNamespaces": {
-		"MediaWiki\\Extension\\ModeratorToolkit\\": "src/"
+		"MediaWiki\\Extension\\ModeratorToolkit\\": "src/",
+		"MediaWiki\\Extension\\ModeratorToolkit\\Maintenance\\": "maintenance/"
 	},
 	"MessagesDirs": {
 		"ModeratorToolkit": [
 			"i18n",
-			"i18n/ext.moderatorToolkit.policiesGuidelines"
+			"i18n/ext.moderatorToolkit.policiesGuidelines",
+			"i18n/reengagementEmail"
 		]
 	},
 	"ResourceFileModulePaths": {

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html
+	lang="{{lang}}"
+	dir="{{dir}}"
+	xmlns:v="urn:schemas-microsoft-com:vml"
+	xmlns:o="urn:schemas-microsoft-com:office:office"
+>
+	<head>
+		{{! Outlook and Apple Mail fixes, from the Fundraising team's templates }}
+		<!--[if gte mso 9]>
+		<xml>
+			<o:OfficeDocumentSettings>
+				<o:AllowPNG/>
+				<o:PixelsPerInch>96</o:PixelsPerInch>
+			</o:OfficeDocumentSettings>
+		</xml>
+		<![endif]-->
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+		<meta name="x-apple-disable-message-reformatting">
+		<title>{{subject}}</title>
+		<!--[if mso]>
+		<style>table {border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;}</style>
+		<![endif]-->
+	</head>
+
+	<body style="margin:0;padding:0;">
+		{{! Inbox preview text, with filler so that the preview ends here }}
+		<div
+			style="
+				display:none;
+				mso-hide:all;
+				max-height:0;
+				overflow:hidden;
+				font-size:1px;
+				line-height:1px;
+				opacity:0;
+				color:transparent;
+			"
+		>
+			{{intro}}
+			&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+			&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+			&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+			&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+			&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+			&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+			&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+			&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+			&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+			&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+		</div>
+
+		{{! Some clients remove <html> and <body> (T413131). }}
+		<table
+			role="article"
+			aria-roledescription="email"
+			aria-label="{{subject}}"
+			lang="{{lang}}"
+			dir="{{dir}}"
+			width="100%"
+			cellpadding="0"
+			cellspacing="0"
+			border="0"
+			bgcolor="#ffffff"
+			style="background-color:#ffffff;"
+		>
+			<tr>
+				<td align="center" style="padding:16px 16px 32px;">
+					{{! Outlook ignores max-width }}
+					<!--[if mso]>
+					<table role="presentation" align="center" width="600" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td>
+					<![endif]-->
+					<table
+						role="presentation"
+						width="100%"
+						cellpadding="0"
+						cellspacing="0"
+						border="0"
+						style="
+							max-width:600px;
+							font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Lato,
+								'Helvetica Neue',Arial,sans-serif;
+							color:#202122;
+							word-break:break-word;
+						"
+					>
+						<tr>
+							<td style="padding:8px 0 16px;">
+								<img
+									src="https://upload.wikimedia.org/wikipedia/donate/9/9c/Logo-wikipedia-landscape-wkfrds.png"
+									alt="{{siteName}}"
+									width="187"
+									height="50"
+									style="display:block;border:0;width:187px;height:50px;"
+								>
+							</td>
+						</tr>
+
+						<tr>
+							<td style="padding-bottom:16px;">
+								<h1 style="margin:0;font-size:14px;line-height:22px;font-weight:bold;">
+									<span style="display:block;font-size:28px;line-height:38px;">{{totalViews}}</span>
+									<span style="display:block;">{{totalViewsLabel}}</span>
+								</h1>
+							</td>
+						</tr>
+						<tr>
+							<td style="font-size:14px;line-height:22px;padding-bottom:16px;">
+								{{intro}}
+							</td>
+						</tr>
+
+						<tr>
+							<td style="padding-bottom:28px;">
+								<table
+									role="presentation"
+									width="100%"
+									cellpadding="0"
+									cellspacing="0"
+									border="0"
+									style="background-color:#e8eeff;border:1px solid #d9e2ff;border-radius:2px;"
+								>
+									<tr>
+										<td style="padding:12px;">
+											<h2
+												style="
+													margin:0;
+													font-size:14px;
+													line-height:20px;
+													font-weight:bold;
+													padding-bottom:12px;
+												"
+											>
+												{{ctaHeading}}
+											</h2>
+											<div style="font-size:14px;line-height:22px;padding-bottom:16px;">
+												{{ctaText}}
+											</div>
+
+											<table
+												role="presentation"
+												width="100%"
+												cellpadding="0"
+												cellspacing="0"
+												border="0"
+											>
+												<tr>
+													<td
+														align="center"
+														bgcolor="#3366cc"
+														style="
+															mso-padding-alt:12px;
+															border-radius:2px;
+															background-color:#3366cc;
+														"
+													>
+														<a
+															href="{{homepageUrl}}"
+															style="
+																display:block;
+																padding:12px;
+																color:#ffffff;
+																font-size:14px;
+																line-height:20px;
+																font-weight:bold;
+																text-align:center;
+																text-decoration:none;
+															"
+														>
+															{{ctaButton}}
+														</a>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+
+						<tr>
+							<td style="padding-bottom:12px;">
+								<h2 style="margin:0;font-size:14px;line-height:20px;font-weight:bold;">
+									{{pagesHeading}}
+								</h2>
+							</td>
+						</tr>
+						{{#pages}}
+						<tr>
+							<td style="padding-bottom:8px;">
+								<table
+									role="presentation"
+									width="100%"
+									cellpadding="0"
+									cellspacing="0"
+									border="0"
+									style="border:1px solid #a2a9b1;"
+								>
+									<tr>
+										{{#hasThumbnail}}
+										<td width="40" valign="top" style="padding:12px 0 12px 12px;">
+											<a href="{{url}}" aria-hidden="true" tabindex="-1" style="display:block;">
+												{{! Outlook ignores object-fit }}
+												<!--[if mso]>
+												<img
+													src="{{thumbnailUrl}}"
+													alt=""
+													width="38"
+													style="display:block;border:1px solid #c8ccd1;"
+												>
+												<![endif]-->
+												<!--[if !mso]><!-->
+												<img
+													src="{{thumbnailUrl}}"
+													alt=""
+													width="38"
+													height="38"
+													style="
+														display:block;
+														width:38px;
+														height:38px;
+														object-fit:cover;
+														border:1px solid #c8ccd1;
+														border-radius:2px;
+													"
+												>
+												<!--<![endif]-->
+											</a>
+										</td>
+										{{/hasThumbnail}}
+										<td valign="top" style="padding:12px;">
+											<a
+												href="{{url}}"
+												style="
+													display:block;
+													font-size:14px;
+													line-height:20px;
+													font-weight:bold;
+													color:#202122;
+													text-decoration:none;
+												"
+											>
+												{{name}}
+											</a>
+											<div style="padding-top:4px;font-size:14px;line-height:20px;color:#54595d;">
+												{{views}}
+											</div>
+											{{#newEditsLineHtml}}
+											<div style="padding-top:8px;font-size:12px;line-height:20px;color:#54595d;">
+												{{{.}}}
+											</div>
+											{{/newEditsLineHtml}}
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						{{/pages}}
+
+						<tr>
+							<td style="padding-top:28px;font-size:12px;line-height:18px;color:#54595d;">
+								--<br><br>
+								{{{footerHtml}}}
+							</td>
+						</tr>
+					</table>
+					<!--[if mso]>
+							</td>
+						</tr>
+					</table>
+					<![endif]-->
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

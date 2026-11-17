@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dillon Hardy"
+		]
+	},
+	"moderator-toolkit-reengagement-email-subject": "Subject of the re-engagement email.\n\nParameters:\n* $1 - the total number of views of the articles that the user edited\n* $2 - the username of the recipient, for GENDER",
+	"moderator-toolkit-reengagement-email-total-views-label": "Text below the large number at the top of the re-engagement email.\n\nParameters:\n* $1 - the total number of views, shown above this text. Use it only for PLURAL.\n* $2 - the username of the recipient, for GENDER",
+	"moderator-toolkit-reengagement-email-intro": "First sentence of the re-engagement email. It also shows in the inbox, after the subject.\n\nParameters:\n* $1 - the username of the recipient. Also use it for GENDER.\n* $2 - the number of editors this month (225,000)",
+	"moderator-toolkit-reengagement-email-cta-heading": "Heading of the box in the re-engagement email that asks the user to edit again.",
+	"moderator-toolkit-reengagement-email-cta-text": "Text in the box in the re-engagement email that asks the user to edit again. \"Suggested edits\" is the name of a feature of the newcomer homepage.\n\nParameters:\n* $1 - the username of the recipient, for GENDER",
+	"moderator-toolkit-reengagement-email-cta-button": "Label of the button in the re-engagement email. The button opens the newcomer homepage ([[Special:Homepage]]).\n\nParameters:\n* $1 - the username of the recipient, for GENDER. English does not use it.",
+	"moderator-toolkit-reengagement-email-pages-heading": "Heading above the list of up to three articles that the user edited, in the re-engagement email.\n\nParameters:\n* $1 - the username of the recipient, for GENDER",
+	"moderator-toolkit-reengagement-email-page-views": "Number of views of one article since the user edited it, in the re-engagement email.\n\nParameters:\n* $1 - the number of views",
+	"moderator-toolkit-reengagement-email-page-new-edits": "Link text to the latest change of an article, in the re-engagement email. Used as $1 in {{msg-mw|moderator-toolkit-reengagement-email-page-new-edits-by}}.\n\nParameters:\n* $1 - the number of edits to the article since the user edited it",
+	"moderator-toolkit-reengagement-email-page-new-edits-by": "Line about the activity on an article since the user edited it, in the re-engagement email.\n\nParameters:\n* $1 - a link with the text {{msg-mw|moderator-toolkit-reengagement-email-page-new-edits}}. In the plain-text email, only the link text; the URL follows the sentence.\n* $2 - the number of other people who edited the article",
+	"moderator-toolkit-reengagement-email-footer": "Footer of the re-engagement email.\n\nParameters:\n* $1 - a link to the user's notification preferences, with the text {{msg-mw|moderator-toolkit-reengagement-email-footer-preferences}}. In the plain-text email, only the link text; the URL follows the sentence.\n* $2 - the username of the recipient, for GENDER",
+	"moderator-toolkit-reengagement-email-footer-preferences": "Link text in {{msg-mw|moderator-toolkit-reengagement-email-footer}}. The link opens the notification preferences.\n{{Identical|Preferences}}"
+}

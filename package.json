@@ -9,7 +9,7 @@
 		"lint": "npm -s run lint:js && npm -s run lint:styles && npm -s run lint:i18n",
 		"lint:js": "eslint .",
 		"lint:styles": "stylelint \"resources/**/*.{less,css,vue}\" --allowEmptyInput --cache",
-		"lint:i18n": "banana-checker i18n/",
+		"lint:i18n": "banana-checker i18n/ i18n/reengagementEmail/",
 		"lint:fix": "npm -s run lint:fix:js && npm -s run lint:fix:styles && npm -s run lint:fix:svg",
 		"lint:fix:js": "npm -s run lint:js -- --fix",
 		"lint:fix:styles": "npm -s run lint:styles -- --fix",
