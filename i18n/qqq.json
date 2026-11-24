@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"MusikAnimal",
 			"Dillon Hardy",
-			"Jsn.sherman"
+			"Jsn.sherman",
+			"MusikAnimal"
 		]
 	},
 	"moderator-toolkit-desc": "{{desc|name=ModeratorToolkit|url=https://www.mediawiki.org/wiki/Extension:ModeratorToolkit}}",

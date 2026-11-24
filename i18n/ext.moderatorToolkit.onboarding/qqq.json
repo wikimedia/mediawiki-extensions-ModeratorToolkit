@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Dillon Hardy"
+			"Dillon Hardy",
+			"Raymond"
 		]
 	},
 	"moderator-toolkit-onboarding-title": "Title for the onboarding dialog.",
